@@ -1,0 +1,368 @@
+SAFLII Note: Certain personal/private details of parties or witnesses have been redacted from this document
+in compliance with the law and SAFLII Policy
+REPUBLIC OF SOUTH AFRICA
+IN THE HIGH COURT OF SOUTH AFRICA
+GAUTENG DIVISION, JOHANNESBURG
+(1) NOT REPORTABLE
+(2) NOT OF INTREST TO OTHER JUDGES
+CASE NO: 2020-42224
+DATE: 25 September 2025
+In the matter between:
+NDIITWANI GRACE NNDWAMMBI N O First Applicant
+DITLHARE CASTALIA MOLOI N O Second Applicant
+SEWKUMAR ASHENDRA CHATHURY N O Third Applicant
+ALEXANDRA JOHANNA RUSSELL N O Fourth Applicant
+HOLGER MAUL N O Fifth Applicant
+MARTIN SEBASTIAN SOLOMON N O Sixth Applicant
+BRENDA BAIJNATH N O Seventh Applicant
+LEBELO ISAAC LUKHELE N O Eighth Applicant
+(Being the Trustees for the time being of the
+SASOL SIYAKHA ENTERPRISE AND SUPPLIER DEVELOPMENT TRUST)
+and
+SEMATRA (PTY) LIMITED First Respondent
+TSELANE MARIA MALATJI Second Respondent
+YINGISANI HOPE MABASA Third Respondent
+Neutral Citation: Nndwammbi N O and Others v Sematra and Others (2020-
+42224) [2025] ZAGPJHC --- (25 September 2025)
+Coram: Adams J
+2
+Heard: 21 May 2025
+Delivered: 25 September 2025 – This judgment was handed down
+electronically by circulation to the parties' representatives by
+email, by being uploaded to CaseLines and by release to SAFLII.
+The date and time for hand-down is deemed to be 11:30 on
+25 September 2025.
+Summary: Loan and Special Notarial Bond to secure loan – application to
+perfect security – first respondent in breach of loan agreement – applicant
+applies for order perfecting its security of pledge in terms of special notarial
+bond over listed immovable property – no dispute about respondents
+indebtedness to applicants – ordinarily applicants would be entitled to perfect
+the security – respondents contending that there was an agreement that they
+would only be liable to repay the loan if a third party complied with its alleged
+obligations to engage its services as per a contractual arrangement – applicants
+deny such agreement – wording of loan agreement belies the respondents
+claim – no evidence to support the respondents’ grounds of opposition to the
+application –
+Pledge perfected – application granted –
+Joinder application by respondents to join third party as co-respondent – settled
+that the direct and substantial interest test to be satisfied in order to succeed –
+direct and substantial interest is the legal interest in the subject-matter of the
+case which could be prejudicially affected by the order of the court – not
+demonstrated that factually the third party’s right/s to be adversely affected –
+Joinder application refused.
+3
+ORDER
+(1) The respondents’ application for a postponement of part ‘B’ of the main
+application is refused.
+(2) The respondents’ application dated 28 January 2021 for the joinder to
+these proceedings of Sasol South Africa Limited, as a respondent, be and
+is hereby dismissed with costs.
+(3) The first, second and third respondents, jointly and severally, the one
+paying the other to be absolved, shall pay the applicants’ costs of the
+joinder application on the scale as between attorney and client, such costs
+to include the costs of Counsel on scale ‘C’ of the applicable tariff provided
+for in the Uniform Rules of Court.
+(4) The applicants be and are hereby declared to be the mortgagee of all the
+vehicles, machinery and other equipment listed in annexure ‘FA11’ to the
+founding affidavit (‘the mortgaged assets’), annexure ‘FA11’ being an
+extract of the mortgaged assets from and as specified in the Special
+Notarial Bond registered in the Pretoria Deeds Office on 11 September
+2020 under number B[…] (‘the Special Notarial Bond’).
+(5) The applicants be and are hereby authorised to remove, take into
+possession and/or retain possession of the mortgaged assets, and to hold
+the said mortgaged assets in accordance with the provisions of the
+Special Notarial Bond as security for the first respondent's indebtedness to
+it and to dispose of the movable assets in accordance with the provisions
+of the Special Notarial Bond.
+(6) It be and is hereby declared that the applicants are entitled to execute
+against each of the mortgaged assets and that the mortgaged assets are
+specially executable.
+(7) The sheriff and/or his deputy be and are hereby authorised and directed to
+attach, remove and take into possession the mortgaged movable assets
+4
+and to hold and retain same, on behalf of the applicants, as security in
+terms of the Special Notarial Bond in favour of the applicants, and to take
+any and/or such steps necessary to give effect to the said Special Notarial
+Bond.
+(8) The first, second and third respondents and such other persons who are in
+possession of any of the mortgaged assets are hereby ordered and
+directed to deliver to the sheriff and/or his deputy or make available the
+mortgaged assets for collection by the sheriff and/or his deputy, within ten
+days of this court order, failing which the sheriff and/or his deputy be and
+is hereby authorised and directed to take such steps as are necessary to
+give effect to this Order.
+(9) The first, second and third respondents, jointly and severally, the one
+paying the other to be absolved, shall pay the applicants’ costs of this
+opposed application on the scale as between attorney and client, such
+costs to include the costs of part ‘A’ of this application and the costs of
+Counsel on scale ‘C’ of the applicable tariff provided for in the Uniform
+Rules of Court.
+JUDGMENT
+Adams J:
+[1]. The applicants are the Trustees for the time being of the Sasol Siyakha
+Enterprise and Supplier Development Trust, who, in their official capacities as
+such, apply in these proceedings to perfect the security the Trust has over
+movable property owned by the first respondent (Sematra). I shall refer to the
+applicants collectively as ‘the Sasol Siyakha Trust’ or simply as ‘the Trust’. The
+second and the third respondents are the shareholders and the sole directors of
+Sematra and they also bound themselves as sureties and co-principal debtors
+in respect of Sematra’s indebtedness to the Sasol Siyakha Trust.
+5
+[2]. This is part ‘B’ of the applicants’ application, in which the Trust applies for
+final relief declaring that it is entitled to perfect the security it has in respect of
+Sematra’s vehicles, machinery and equipment in terms of a Special Notarial
+Bond number B[…]. The applicants’ cause of action is based on a written Loan
+Agreement concluded between the Trust and Sematra on 27 June 2019, and
+the Special Notarial Bond registered in the Deeds Office on 11 September
+2020, in terms of which the Trust lent and advanced to Sematra R20 000 000,
+repayable by Sematra to the Trust, together with interest thereon and other
+charges provided for in the loan agreement, in sixty monthly, therefore over a
+period of five years.
+[3]. Sematra is and has been since 2020 in breach of the loan agreement in
+that it is in arrears with its monthly instalments. It is for this reason that the
+Trust, as it is entitled to do in terms of the loan agreement, read with the Special
+Notarial Bond, instituted these proceedings with a view to perfecting its security
+by attaching and taking control of the ‘mortgaged property’. The respondents do
+not dispute Sematra’s indebtedness to the Trust and the Trust’s entitlement to
+perfect the security it enjoys in terms of the Special Notarial Bond.
+[4]. In that regard, the Special Notarial Bond provides, in express and
+unequivocal terms, that in the event of a breach by [Sematra], the Trust would
+be entitled to take the following action: -
+‘8.1 … … to declare the full amount of [Sematra’s] indebtedness to the [Trust] from
+whatsoever cause arising to be due and payable forthwith and to claim and
+recover the same from [Sematra] forthwith on demand;
+8.2 if the [Trust] has not already been placed in possession of the Assets, to forthwith
+take possession and thereby perfect its pledge of the Assets.
+8.3 to hold the Assels as security for the payment of all amounts owing by [Sematra]
+to the [Trust] and to retain such possession for so long as the [Trust] may deem
+fit;
+8.4 to dispose of the Assets or any of them by public auction, public tender, or by
+private treaty or otherwise in the [Trust’s] sole discretion and on such terms and
+conditions as the [Trust] in its sole discretion may deem fit and to convey good,
+valid and free title to the purchaser or transferee thereof;
+6
+8.5 to apply for provisional sentence hereunder;
+8.8 to employ such other remedies and to take such other steps against [Sematra] as
+are allowed in law;
+8.7 to recover all costs and charges incurred by the [Trust] In the exercise of its rights
+under this bond, including (but without limitation) all costs of storing the Assets
+and all legal costs and disbursements.’
+[5]. The respondents do, however, oppose the application on the basis of an
+alleged contractual relationship which it has or had at the relevant time with
+Sasol South Africa Limited (‘SSA’), a well-known public company and the
+holding company in the South African Group of Companies. The Sasol Siyakha
+Trust was founded by several companies in the Sasol Group of Companies and
+was formed to ‘[serve] as a vehicle to assist black suppliers, contractors and
+entrepreneurs with the creation, development, funding and accelerated growth
+of their enterprises and thereby deliver successful BBBEE [Broad Based Black
+Economic Empowerment] enterprises to the local communities in the areas in
+which the Sasol Group of companies have a presence, for the benefit of the
+Sasol Group’.
+[6]. The case on behalf of the respondents is that Sematra was appointed as
+a service provider or supplier by Sasol South Africa Limited during 2018 on a
+five-year contract term. The vehicles and equipment purchased by Sematra and
+which were in fact financed by the loan from the Trust, were secured solely to
+service Sasol South Africa Limited. It has been unable to pay the monthly
+instalments in terms of the loan agreement, so Sematra’s case goes, due to a
+failure on the part of Sasol South Africa Limited and the other companies in the
+Sasol Group of Companies to allocate work or sufficient work to it. The case for
+the respondents is therefore that it was agreed upon between the Trust and
+Sematra that the repayment of the loan amount would be made from the
+proceeds of the work allocated to Sematra by the Sasol Group of Companies.
+[7]. In their answering affidavit, the respondents put forward their case in
+sum as follows: -
+7
+‘The agreement is still in force and the first respondent is expected to render services
+to the applicant's parent Company, herein Sasol South Africa Limited, using aforesaid
+equipment and vehicles for a further period of 3 (three) years. Unless the terms in the
+parties' contractual obligations hereto is cancelled, the first respondent must continue
+to render services to the applicant's parent Company, herein Sasol South Africa
+Limited. The breach in any of the terms in the contract, although the parties have
+reciprocal duty to perform, which is considered personal right and same cannot be
+enrolled and heard on the urgent court roll hereto.’
+[8]. Mr Maleka, Counsel for the respondents, also submitted that, before the
+Trust can enforce its rights in terms of the Special Notarial Bond, it is required to
+fulfil its main obligation, that being that Sematra, as an appointed supplier of the
+Sasol Group of Companies, gets work from the said group.
+[9]. The difficulty with the case on behalf of the respondents is simply that it
+is bad in law. No nexus – none whatsoever – is established by the evidence
+placed before me by the respondents, between the loan agreement and the
+conclusion that the loan amount was repayable only in the event of SSA utilising
+the services of Sematra from which engagement the latter company would
+service the loan account. Sematra, in general and sweeping terms, avers that
+there was agreement between the parties that the repayment of the loan
+amount by Sematra to the Trust would be dependent on the contractual
+relationship between the Sematra and SSA. No details or particulars are
+provided by the respondents of this alleged agreement. No allegation is made
+as to whether the agreement was expressly in writing or orally or by implication.
+The respondents fail to provide details relating to the contractual arrangement
+between it and SSA and/or the Sasol Group of Companies. The simple point of
+the matter is that the case on behalf of the respondents is not supported by the
+evidence before Court.
+[10]. The respondents’ case, in any event, loses sight of the fact that the
+applicant in this matter, being the Sasol Siyakha Trust, is a legal entity
+completely separate and distinct from SSA and the Sasol Group of Companies,
+8
+and that is so despite the fact that companies in the Group founded the Trust. It
+is trite that a Trust is a legal entity separate from its trustees, its founder and its
+beneficiaries.
+[11]. For the aforegoing reasons alone, the grounds raised by the respondents
+in opposition to the applicant’s application stand to be rejected.
+[12]. What is more is that the case on behalf of the respondents is wholly
+defeated by the written instruments on which the applicants’ cause is based.
+Importantly, the loan agreement makes no mention of the supposed conditions
+referenced by the respondents in the answer. The sum total of the reference to
+the contractual relationship between Sematra and SSA can be found in the
+definitions section of the loan agreement, which provides that ‘the Service
+Contract’ means ‘contract CW44231 and all other agreements concluded
+between [Sematra] and Sasol South Africa (Pty) Ltd’. The agreement then goes
+on to provide in the introduction as follows: -
+‘2.1. It is recorded that [Sematra] wishes to borrow the Capital from the [Trust] for
+purposes of the Project, and the [Trust] is willing to lend the Capital to [Sematra]
+for such purposes, subject to the terms and conditions contained in this
+Agreement.’ (Emphasis added).
+[13]. Furthermore, and contrary to what is alleged by the respondents, the
+loan agreement provides that the assets used in the project and the proceeds
+from that project can be used to secure Sematra’s indebtedness to the Trust.
+The relevant clauses read as follows: -
+‘11.1. As Security for the due, proper and timeous performance by [Sematra] of all its
+obligations to the [Trust] in terms this Agreement: -
+11.1.1. The member of [Sematra] shall bind himself/herself as Guarantor and co-
+principal debtor in solidum with [Sematra] to [the Trust] in terms of a written
+Guarantee agreement as set out in Annexure G;
+11.1.2. The assets purchased by [Sematra] in terms of the proceeds of this
+Agreement, and set out in Annexure F hereto, will be considered to be used
+as Security in favour of the [Trust]; and
+9
+11.1.3. [Sematra] hereby cedes the proceeds of Contract CW44231 and any other
+Contract between Sasol and its affiliate Companies and [Sematra] as
+security for the repayment of the debt and the [Trust] is hereby authorized
+to recover any outstanding payment from such Contract without prior notice
+to [Sematra].’
+[14]. From the foregoing it is abundantly clear, as I have already stated, that
+the written agreement between the parties, in particular the express wording,
+completely defeats the case on behalf of the respondents. Not only does the
+agreement not contain the provisions contended for by the respondents, but the
+clauses provide for exactly the opposite to what the respondents contend the
+agreement was. Moreover, the death knell for the respondents’ case is the
+following clause in the loan agreement: -
+‘20. Whole Agreement
+This Agreement constitutes the whole agreement between the Parties as to the
+subject matter hereof and no agreements, representations or warranties between
+the Parties regarding the subject matter hereof other than those set out herein
+are binding on the Parties,’
+[15]. For all of these reasons, I conclude that the grounds on which the
+respondents oppose the applicants’ application are bad in law. Accordingly, the
+Trust is entitled to the relief claimed in part ‘B’ of the application and the
+application should be granted.
+[16]. Similarly, the interlocutory application by the respondents to have Sasol
+South Africa joined in these proceedings as a fourth respondent is ill-conceived,
+ill-advised and equally bad in law. It is settled law that an applicant for the
+joinder of a third party is required to meet the direct and substantial interest test
+in order to succeed1. What constitutes a direct and substantial interest is the
+legal interest in the subject-matter of the case which could be prejudicially
+affected by the order of the court. This means that the applicant must show that
+1 SA Riding for the Disabled Association v Regional Land Claims Commissioner 2017 (5) SA 1 (CC) at
+5A–D, approving Nelson Mandela Metropolitan Municipality v Greyvenouw CC 2004 (2) SA 81 (SE) at
+89B–C.
+10
+the third party has a right adversely affected or likely to be affected by the order
+sought. But the applicant does not have to satisfy the court at the stage of
+joinder that it will succeed. It is sufficient for such applicant to make allegations
+which, if proved, would entitle it to relief.
+[17]. The point about the joinder application in casu is that, on the evidence
+before me, the respondents do not even begin to prove a case against the Trust
+based on alleged conditions in the loan agreement, which fly in the face of the
+text and the context of the said agreement and the Special Notarial Bond. The
+evidence also does not support a sustainable case against Sasol South Africa
+Limited. But even if I am wrong in this conclusion, the joinder application should
+still fail if for no other reason than the fact the SSA and the Sasol Siyakha Trust
+are completely separate legal entities and the fact that one has a contractual
+claim against the one, does not mean of necessity that you have a claim against
+the other.
+[18]. Lastly, during the hearing of the application on 21 May 2025, Mr Maleka
+applied for a postponement of the main application on the basis that the
+interlocutory joinder application should be adjudicated before the main
+application. Submissions were therefore made in support of the granting of the
+application for the joinder of SSA. Mr Chavalala opposed the application for a
+postponement on the basis that the joinder application was meritless and
+should be dismissed, which then meant that the main application could and
+should be argued. As I have already held, the joinder application is stillborn and
+falls to be dismissed for the reasons already mentioned.
+[19]. It follows that the respondents’ application for a postponement of the
+main application should be dismissed and an order to that effect is issued.
+Costs
+[20]. The general rule in matters of costs is that the successful party should be
+given his costs, and this rule should not be departed from except where there
+11
+are good grounds for doing so, such as misconduct on the part of the
+successful party or other exceptional circumstances. See: Myers v Abramson2.
+[21]. I can think of no reason why I should deviate from this general rule. The
+applicants should therefore be granted its costs of the main application, as well
+as the costs relating to the respondents’ joinder application. In that regard, the
+loan agreement provides that, in the event of the Trust being required to take
+action to enforce its rights, the respondents would be liable for the applicants’
+legal costs on the scale as between attorney and own client.
+Order
+[22]. In the result, I make the following order:
+(1) The respondents’ application for a postponement of part ‘B’ of the main
+application is refused.
+(2) The respondents’ application dated 28 January 2021 for the joinder to
+these proceedings of Sasol South Africa Limited, as a respondent, be and
+is hereby dismissed with costs.
+(3) The first, second and third respondents, jointly and severally, the one
+paying the other to be absolved, shall pay the applicants’ costs of the
+joinder application on the scale as between attorney and client, such costs
+to include the costs of Counsel on scale ‘C’ of the applicable tariff provided
+for in the Uniform Rules of Court.
+(4) The applicants be and are hereby declared to be the mortgagee of all the
+vehicles, machinery and other equipment listed in annexure ‘FA11’ to the
+founding affidavit (‘the mortgaged assets’), annexure ‘FA11’ being an
+extract of the mortgaged assets from and as specified in the Special
+Notarial Bond registered in the Pretoria Deeds Office on 11 September
+2020 under number B[…] (‘the Special Notarial Bond’).
+2 Myers v Abrahamson 1951(3) SA 438 (C) at 455
+12
+(5) The applicants be and are hereby authorised to remove, take into
+possession and/or retain possession of the mortgaged assets, and to hold
+the said mortgaged assets in accordance with the provisions of the
+Special Notarial Bond as security for the first respondent's indebtedness to
+it and to dispose of the movable assets in accordance with the provisions
+of the Special Notarial Bond.
+(6) It be and is hereby declared that the applicants are entitled to execute
+against each of the mortgaged assets and that the mortgaged assets are
+specially executable.
+(7) The sheriff and/or his deputy be and are hereby authorised and directed to
+attach, remove and take into possession the mortgaged movable assets
+and to hold and retain same, on behalf of the applicants, as security in
+terms of the Special Notarial Bond in favour of the applicants, and to take
+any and/or such steps necessary to give effect to the said Special Notarial
+Bond.
+(8) The first, second and third respondents and such other persons who are in
+possession of any of the mortgaged assets are hereby ordered and
+directed to deliver to the sheriff and/or his deputy or make available the
+mortgaged assets for collection by the sheriff and/or his deputy, within ten
+days of this court order, failing which the sheriff and/or his deputy be and
+is hereby authorised and directed to take such steps as are necessary to
+give effect to this Order.
+(9) The first, second and third respondents, jointly and severally, the one
+paying the other to be absolved, shall pay the applicants’ costs of this
+opposed application on the scale as between attorney and client, such
+costs to include the costs of part ‘A’ of this application and the costs of
+Counsel on scale ‘C’ of the applicable tariff provided for in the Uniform
+Rules of Court.
+13
+_________________________________
+L R ADAMS
+Judge of the High Court
+Gauteng Division, Johannesburg
+HEARD ON: 21 May 2025
+25 September 2025 – Judgment handed
+JUDGMENT DATE:
+down electronically
+FOR THE APPLICANTS: T Chavalala
+Mathopo Moshimane Mulangaphuma
+INSTRUCTED BY: Incorporated t/a DM5 Incorporated,
+Illovo, Sandton
+FOR THE RESPONDENTS: K J Maleka
+INSTRUCTED BY: Leshilo Incorporated Attorneys, Pretoria

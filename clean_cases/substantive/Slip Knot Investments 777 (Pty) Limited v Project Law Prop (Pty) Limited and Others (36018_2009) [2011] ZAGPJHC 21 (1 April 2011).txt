@@ -1,0 +1,278 @@
+JUDGMENT
+
+WILLIS J:
+ The applicant has approached the court by way of motion proceed-
+ings for an order that the first and second respondents are jointly and
+severally liable, the one paying the other to be absolved, to pay the ap-
+plicant an amount of some R15 million, together with interests and
+costs.
+ The debt arises from a written agreement of loan concluded
+between the applicant and the first respondent secured by a written
+deed of suretyship signed by the second respondent. The third re-
+spondent is a nominal respondent only. The money was lent as so-
+called “short term bridging finance” in a property development
+scheme. In the papers this type of funding is called “mezzanine fund-
+ing”. The expression “mezzanine funding” has come to the fore in the
+South Gauteng High Court relatively recently. Although there may be
+minor but nevertheless distinct differences between “short term
+bridging finance” and “mezzanine funding”, for the purposes of this
+judgment these differences are unimportant.
+ After several postponements at the request of the first and second
+respondents, the application came before Barrie AJ on 15 February,
+2011. No affidavits were filed ion behalf of the respondents. It would
+seem that Barrie AJ was troubled about the lawfulness of the rate of
+interest which the applicant had claimed. Barrie AJ suggested that an
+amicus curiae should be appointed to make submissions to the court
+on the issue. Mr Moorcroft was duly appointed as amicus. He has the
+distinction of being the author of Banking Law and Practice.1 I am
+much indebted to Mr Moorcroft for his helpful submissions in the mat-
+ter as I am to the Johannesburg Bar Council, which acting in accord-
+ance with the finest of its traditions, adopted a wise and obliging atti-
+tude in selecting his appointment.
+ The borrower in a “mezzanine funding” transaction is typically a
+small developer requiring capital for which its own funding is insuffi-
+cient and for which the commercial banks are unwilling to lend. The
+lender borrows the money from the commercial banks. The money is
+lent short-term. The risks but the rewards too are high for the lender.
+Borrowers of “mezzanine funding” are typically experienced “players”
+in the property development market.
+LexisNexis: Durban, 2009
+The rate of interest charged to the first respondent was 1,25% per
+weekmonth until the first respondent fell into arrears and thereafter
+1,5% per weekmonth. In an affidavit by Mr Duncan Campbell, the
+portfolio manager of the applicant, the change in interest rate after a
+debtor is in default isn justified on two main grounds: (i) administrat-
+ive costs in the monitoring and “follow-up” of the debt increase sub-
+stantially once it is in default and (ii) the risk rises considerably.
+ The first respondent fell into arrears on 12th October 2008. The ap-
+plicant elected to cancel the agreement on 22nd May, 2009. The
+amicus and the counsel for the applicant agreed that the amount ow-
+ing as at 6th March 2009 was R 11 337 822, 54.
+ The amicus and counsel for the applicant agreed that the in du-
+plum rule should be been applied to the calculations made. The man-
+ner of application of the in duplum rule in this case is consistent with
+the recent decision of the Supreme Court of Appeal (‘the SCA”) in the
+case of Nedbank Ltd and Others v The National Credit Regulator and
+Another.2
+ Mindful of the fact the National Credit Act, No.34 of 2005, as
+amended (“the NCA”) has repealed the Usury Act, No. 73 of 1968, as
+ZASCA 35 (28 March 2011)
+amended, the amicus and counsel for the applicant agreed that there
+are three issues that fall to be decided:
+(i) whether the applicant’s calculations result in a con-
+travention of the NCA;
+(ii) whether the loan is usurious to the extent that it is
+unlawful or contra bonos mores;
+(iii) whether the increase in the rate from 1,25% to
+1,5% after the first respondent was in default consti-
+tutes an unlawful penalty in terms of the Conventional
+Penalties Act, No.51 of 1962, as amended.
+ Referring to sections 1, 4(1) (b), 4 (2) (c), 7 (1) (b) and 9(4) of the
+NCA, the amicus and counsel for the applicant agreed that the provi-
+sions of the NCA were not applicable to this transaction because the
+principal debtor is a juristic person whose asset value or annual
+turnover at the signature date of the agreement exceeded R1 million
+and the agreement constituted a “large agreement” as envisaged in the
+NCA with its value exceeding the thresholds determined in terms of
+the NCA. I agree.
+ The amicus and counsel for the applicant both submitted that in-
+sofar as the second respondent as surety was concerned, my sister
+Satchwell was correct in holding in Firstrand Bank Ltd v Carl Beck
+Estates (Pty) Ltd3 that sureties for agreements that fall outside of the
+2009 (3) SA 384 (T)
+NCA cannot invoke the provisions of the NCA as a defence. See, also:
+Standard Bank of SA Ltd v Hunkydory Investments (Pty) Ltd and An-
+other.4 As I said in Stocker v Giddings and Another, 5 a unanimous “full
+bench” appeal, it is trite that sureties are promissores subsidiarii, that
+their obligations are accessory to that of the principal debtor.6 In that
+judgment I observed that this entails, inter alia, that a surety has the
+same defences in rem as the principal debtor. I repeat my summary
+that, in plain English, the Latin expressions in this paragraph mean
+that sureties have the same substantive defences as are available to
+the principal debtor, no more and no less. Accordingly, I agree with
+Satchwell J. The applicant succeeds on the first point to be decided.
+ In determining whether a defence of extortionate rates of interest
+or usury can be sustained it is helpful to refer to the judgment of
+Innes J (as he then was) in Reuter v Yates7 where he said:
+It comes to this - in deciding whether the defence of usury
+has been sustained, and whether the lender has taken such
+an undue advantage of the borrower, has so practised extor-
+tion and oppression, that his conduct, being akin to fraud,
+disentitles him to relief, the Court will examine all the cir-
+cumstances of the case. It will not only look at the scale of
+(1) 2010 (1) SA 627 (C) at paragraphs and 
+GSJ Case No A3006/2010 delivered on 17 November, 2010 at paragraph .
+Boruchowitz, Monama JJ and I dismissed an appeal from the judgment of Van
+Eeden AJ.
+See, for example, Imperial Cold Storage and Supply Company Limited v Julius Weil
+and Co 1912 AD 747 at 750 and Trust Bank of Africa Ltd v Frysch 1977 (3) SA 562
+(A) at 584F-G.
+1904 TS 855 at 858
+interest which has been stipulated for, but will have regard
+to the ordinary rate prevalent in similar transactions, to the
+security offered and the risk run, to the length of time for
+which the loan was given, the amount lent, and the relative
+positions of the parties. Approaching the present dispute in
+that way, we find that the evidence given by the appellant
+was not very full. It certainly does not prove the existence of
+extortion or oppression. The rate agreed upon was high, but
+the parties were dealing at arms’ length, the sum advanced
+was a small one for a short period, and there appears to
+have been no security.
+Innes J found that the borrower was not justified in refusing to pay on
+the ground that a usurious rate of interest had been “stipulated for”.8
+The court, sitting in an appeal from the magistrate’s court in Johan-
+nesburg, affirmed the principles set out by Watermeyer J (as he then
+was) in Dyason v Ruthven.9 In Bekker and Another v Oos-Vrystaat
+Kaap Koöperasie Bpk10 the Supreme Court of Appeal confirmed that
+Reuter v Yates was correct in terms of the onus which a person claim-
+ing an unlawfully high rate of interest bears. With exquisite polite-
+ness, the amicus and counsel for the applicant requested me to deliver
+a “reportable” judgment because “those in the market” needed to
+know whether this was still good law in this division.
+Ibid.
+3 S.282
+3 All SA 301 (A) at paragraph 
+ Quite apart from any other consideration, this decision remains
+most emphatically good law in this division: it was decided by a full
+court having an area of jurisdiction coextensive with that of the
+present day North and South Gauteng High Courts. The principles in
+question cannot have been abrogated by disuse. I consider the case
+Reuter v Yates to be another of the little treasures in our legal attic.11
+That which Innes J said in the passage quoted above remains good
+law. Both the amicus and counsel for the applicant agreed that this
+was so. I am fortified in my conviction on this point by the fact that, in
+the shadow of Table Mountain, Yekiso J referred to the case with ap-
+proval in Structured Mezzanine Investments (Pty) Ltd v Davids and Oth-
+ers.12
+ For the sake of completeness I record that, on the clear authority
+of the cases of Sasfin v Beukes13 and Juglal NO v Shoprite Checkers
+(Pty) Ltd t/a OK Franchise Division,14 it cannot be found that the agree-
+ment was contra bonos mores: the first and second respondents were
+“no babes in the woods” and, accordingly, there are no considerations
+of protecting the poor or others in an inferior bargaining position such
+that it would be unconscionable or immoral to enforce the agreements
+For another example of what I consider to be a treasure in our legal attic, see
+Mineworkers Investment Co (Pty) Ltd v Modibane 2002 (6) 512 (W) at paragraph .
+2010 (6) SA 622 (WCC) at paragraphs t0 
+1989 (1) SA 1 (A) at 8C-9G
+2004 (5) SA 248 (SCA) at paragraphs -
+in question.15 Against the background of the facts in casu, the second
+point must also be decided in favour of the applicant.
+ On the question of whether the increase in the rate of interest
+from 1,25 to 1,5% after the first respondent was in default amounted
+to a penalty in contravention of the Conventional Penalties Act, the
+splendid unanimity of the amicus and counsel for the applicant fell
+apart. They did, however agree that, on this issue too, it would be im-
+portant to have a “reportable” judgment. Relying on the provisions of
+section 1 of the Conventional Penalties Act, the amicus submitted that
+this was a penalty.
+ This section provides as follows:
+(1) A stipulation, hereinafter referred to as a penalty stipulation,
+whereby it is provided that any person shall, in respect of an
+actor omission in conflict with a contractual obligation, be liable
+to pay a sum of money or to deliver or perform anything for the
+benefit of any other person, hereinafter referred to as a creditor,
+either by way of a penalty or as liquidated damages, shall, sub-
+ject to the provisions of this Act, be capable of being enforced in
+any competent court.
+Since time immemorial, our common law has set its face against exploitation in
+the levying of interest. A most illuminating discussion on this aspect can be found in
+an historical survey by Grové, Die gemeenregtelike beheer van woeker in die Suis-
+Afrikaanse Reg, De Jure, 1989 (22), 233 and Die gemeenregtelike beheer van woeker
+in die Suis-Afrikaanse Reg (vervolg), De Jure, 1990 (23),118.
+(2) Any sum of money for the payment of which or anything for the
+delivery or performance of which a person may so become liable,
+is in the Act referred to as a penalty.
+On this issue, we authors on matters of banking part company
+amicably.16 Section 1 of the Conventional Penalties Act does not so
+much define a penalty as that it provides that what is conventionally
+regarded as a penalty falls within the purview of the Act. In other
+words, one must first ask oneself whether the increase in the rate of
+interest is a penalty. In my view, it is not.
+ As a former banker myself, I think I may fairly take cognisance of
+the fact that, as counsel for the applicant submitted, the commercial
+banks have, since time immemorial, charged a higher rate of interest
+once a debtor is in default for precisely the same reasons as those
+advanced by Mr Campbell. As Innes J said in the passage above in
+Reuter v Yates, risk is a factor to relevant interest. Self-evidently, risk
+increases once a debtor is in default. Besides, these justifications by
+Mr Campbell for the increase in the rate of interest were undisputed.
+ Even if I am wrong in regard to whether the increase in the rate of
+interest amounts to a penalty, the amicus and counsel for the applic-
+ant both agreed, entirely correctly, that the Conventional Penalties Act
+only affects the enforceability of a penalty if it is out of proportion to
+the prejudice suffered, if it is markedly greater than the prejudice and
+The amicus and I share a similar pastime: writing books on banking. Mine was
+Banking in South African Law, Juta’s: Cape Town, 1981.
+if the excess is such that it would be unfair to enforce the penalty.17
+They also agreed that the onus of proof is on the debtor to show that
+the penalty is out of proportion to the prejudice suffered.18 Mindful of
+the recent judgments decided by Yekiso J in Structured Mezzanine In-
+vestments (Pty) Ltd v Davids and Others, referred to above and Bozalek
+J in Plumbago Financial Services (Pty) Ltd t/a Toshiba Rentals v Janap
+Joseph t/a Project Finance,19 the interest claimed does not appear to
+be disproportionate to the prejudice which the applicant has suffered.
+The applicant succeeds on the third point as well.
+ At the time when I reserved judgment there was a not unimport-
+ant point which we all overlooked. It is that the applicant is not en-
+titled to interest at the rate provided for in the agreement after that
+agreement had been cancelled. The reason lies in the doctrine of elec-
+tion as set out by Watermeyer AJ (as he then was) in the case of Segal
+v Mazzur.20 An innocent party to a contract that has been breached by
+another party cannot blow hot and cold; he cannot approbate and rep-
+robate the contract.21 Segal v Mazzur was expressly approved by the
+SCA in S Du Plessis and Another NNO v Rolfes Ltd.22 The point is so
+See Western Credit v Kajee 1967 (4) SA 386 (N) at 389H-391E; Maiden v David
+Jones (Pty) Ltd 1969 (1) SA 59 (N) at 63A-64A; Van Staden v Central South African
+Lands and Mines 1969 (4) SA 349 (W) at 351D-353E; Bloemfontein Munisipaliteit v
+Ulrich 1975 (4) SA 785 (O) at 789C-791B; Santam Bank Bpk v Kellerman 1978 (1) SA
+(C) at 1163B-C; Murcia Lands CC v Erinvale Country Estate Home Owners
+Association 4 All SA 656 (C)
+See, Smit v Bester 1977 (4) SA 937 (A) at 940H-943A; Chrysafis v Katsapas 1988
+(4) Sa 818 (A) at 828H-J.
+2008 (3) SA 47 (C)
+1920 CPD 634 at 644-5
+RH Christie. 2006. The South African Law of Contract. 5th Edition. LexisNexis:
+Durban, p540.
+1997 (2) SA 354 (SCA) at 364G-365A
+clear that I have not invited counsel to come to court again to address
+me on it. The applicant cancelled the agreement on 22nd May, 2009.
+Interest for the period from 6th March, 2009 to 22nd May, 2009
+amounts to R1 870 737. This is the period from the date upon which
+we all agreed the amount owing was R11 337 822 until the date of
+cancellation. The sum of R11 337 822 and R1 870 737 is R13 208
+559. The applicant is entitled to payment of this sum.
+ Mindful of sections 1 (1) and (2) of the Prescribed Rate of Interest
+Act, No. 55 of 1975, the new section 2A introduced by the Prescribed
+Rate of Interest Amendment Act, No. 7 of 1997and the helpful judg-
+ment by Thring J on the subject in the MV Sea Joy case,23 it seems to
+me appropriate to order interest at the prescribed rate in terms of the
+Prescribed Rate of Interest Act, as amended, from 23rd May, 2009, the
+day after cancellation to the date of payment. The prescribed rate is
+15,5% per annum.24 The agreement between the applicant and the first
+respondent provides for costs on an attorney and client scale.
+ The following is the order of the court:
+The first and second respondents are ordered, jointly and sever-
+ally, the one paying the other to be absolved, to make payment to
+the applicant of:
+1. R13 208 559 (thirteen million, two hundred and eight
+thousand, five hundred and fifty-nine rands);
+1998 (1) SA 487 (C at 505F-508I
+GN R1814 GG 15143 of 1st October 1993
+2. Interest on the aforesaid sum at the rate of 15,5% per an-
+num, calculated from 23rd May, 2009 to date of payment; and
+3. The costs of the application, which costs may include the
+costs consequent upon the employment of two counsel and
+may be taxed on an attorney and client scale.
+DATED AT JOHANNESBURG THIS 1st DAY OF APRIL,
+
+N.P.WILLIS
+JUDGE OF THE HIGH COURT
+Counsel for the Applicant: Adv. R. Stockwell SC (with him, Adv J. F.
+Pretorius)
+No Appearance for the Respondents
+Amicus curiae: Adv FJ. Moorcroft
+Attorneys for Applicant: Sim and Botsi Attorneys Incorporated
+Dates of hearing: 30th March, 2011
+Date of judgment: 1st April, 2011

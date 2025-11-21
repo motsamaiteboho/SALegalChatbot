@@ -1,0 +1,442 @@
+JUDGMENT:
+NNESE MEDICALS (PTY) LIMITED v DE RM MOTORS (PTY) LIMITED
+NGCONGO AJ:
+INTRODUCTION
+This matter concerns the crisp question of whether the applicant is entitled to
+cancel an agreement of sale and purchase of a motor vehicle between itself and the
+respondent.
+When the application was initially launched in November 2020, the primary
+relief sought by the applicant was an order for specific performance. The special
+performance sought was to compel the respondent to furnish the applicant with the
+necessary documentation to effect transfer of the vehicle described as a 2016 Ford
+Ranger 3.2 4x4 Auto with license number [....] (“the Ford Ranger”) to the applicant.
+However, by the time the application was heard, the applicant informed the Court
+that it is no longer pursuing the primary relief. Instead, the applicant seeks an order
+that confirms the cancellation of the agreement and that the parties be placed in the
+position they were prior to the conclusion of the contract.
+This abandonment is not unsurprising, especially in light of the applicant’s
+previous communication to the respondent of its election to cancel the agreement. It
+is generally noted that an election to either affirm or cancel a contract, once made, is
+final.1 Thus, the only relief that remains for consideration in this matter, is
+confirmation of the cancellation of the agreement and an order for restitution.
+Relevant facts
+This case arises as follows.
+See the rationale of Hoexter JA in Chamber of Mines of SA v National Union of Mineworkers
+(1) SA 668 (A) at 690 for this general proposition, where it was held:
+“One or other of two parties between some legal relationship subsists is sometimes faced with
+two alternative and entirely inconsistent courses of action or remedies. The principle that in
+this situation the law will not allow that party to blow hot and cold is a fundamental one of
+general application.”
+However, it is important, too, to note the qualification of this general statement, as noted by Hoexter
+JA in reference to Bower’s Estoppel by Representation (1923) at para 244 which states that “[a] man
+may change his mind as often as he pleases, so long as no injustice is thereby done to another.” In
+the current matter, therefore, as the respondent had not relied (to its detriment) on the applicant’s
+letter of cancellation of 17 November 2020, it is arguable that the applicant was entitled to pursue an
+order of specific performance, despite having elected to cancel the agreement and communicating
+such election to the respondent in unequivocal terms. This point is, however, purely academic in the
+current matter as the applicant has abandoned the claim for specific performance.
+In October 2020, the parties concluded an oral agreement for the sale and
+purchase of the Ford Ranger for an amount of R266 000.00.
+The applicant took possession of the Ford Ranger on 13 October 2020. After
+taking possession, the applicant states that it established that various repairs and
+services needed to be done on the Ford Ranger and arranged for these to be done.
+These services and repairs came to an amount of approximately.
+As is customary when purchasing a motor vehicle, the applicant sought the
+Ford Ranger’s documentation for the purpose of registering the vehicle in its name
+and effecting transfer of ownership.
+The applicant was informed, however, that the Ford Ranger was new stock to
+the respondent, which is a second-hand motor vehicle dealership, and that the
+vehicle registration papers for the Ford Ranger were not ready. The respondent
+informed Mr Matsetela, the director of the applicant, that the Ford Ranger’s registration
+documents would to be ready for collection within one week from the 13 October
+2020.
+However, after a period of a week, the respondent relayed to the applicant
+that the supplier of the Ford Ranger, Mr Isiaka, had informed the respondent that
+there would be a delay in obtaining the vehicle registration documents. It was,
+however, only in mid-November that Mr Isiaka further informed the respondent of a
+pending criminal case concerning the Ford Ranger, which he had opened in
+September, after he had discovered that the Ford Ranger’s documentation had been
+cloned.
+Shortly after that, on or about 17 November 2020, the applicant’s attorneys
+notified the respondent in writing of their cancellation of the agreement, on the basis
+that the applicant had, despite numerous demands, still not been furnished with the
+registration documents of the Ford Ranger necessary to effect transfer. The
+cancellation letter demanded that the purchase price be repaid, along with the cost
+of repairs and improvements that the applicant had made to the vehicle.
+Despite the cancellation letter, the respondent sought to continue with the
+agreement and informed the applicant on 23 November 2020 that the reason for the
+delay was the COVID-19 pandemic and the resultant regulations and restrictions
+which impacted the operations of the Department of Transport. Despite these
+difficulties, the respondent assured the applicant that the collection of the registration
+documents was expected to take place on 4 December 2020.
+This letter, however, crossed paths with the institution of this application,
+which was issued on the same day and served on the respondent a few days later
+on 26 November 2020. At that point, the applicant repeated what had been said in its
+cancellation letter: that it was unable to use the Ford Ranger because it had not
+been provided with the registration documents.
+In an interesting turn of events, shortly before the hearing of this application,
+some ten months after transfer of the Ford Ranger, on 17 August 2021, the
+respondent eventually furnished the relevant documentation to the applicant.
+What are the issues for determination?
+In the circumstances, there are two main issues for decision, namely:2
+14.1 the applicant’s preliminary point of non-joinder, insofar that point is still
+alive; and
+14.2 whether the applicant is entitled to cancel the agreement in
+consequence of the alleged breach on the part of the respondent.
+In its answering affidavit, the respondent also alleged, as a further preliminary point, that the
+applicant had failed to comply with the Practice Directive. This point was not ultimately pursued by the
+respondent – save in relation to a debate about the appropriate scale for costs. It is accordingly
+unnecessary to consider it further.
+Non-joinder
+For reasons which follow, I am of the view that, in consequence of the
+applicant no longer pursuing the primary relief of specific performance, the non-
+joinder point is no longer engaged.
+The essence of the respondent’s non-joinder point was that Mr Isiaka and the
+Department of Licensing, Langlaagte, ought to have been joined in this application.
+The basis for this contention was as follows. Under the primary relief, the applicant
+sought an order compelling the respondent to furnish the applicant with the
+necessary documentation to enable the applicant to effect transfer of the Ford
+Ranger to its name. The respondent would be unable to do this without Mr Isiaka
+and the Department of Licensing, Langlaagte, and these persons therefore had a
+direct and substantial interest in any order which this court might make in these
+proceedings concerning that primary relief. The alternative point was made that such
+an order could not be sustained or carried into effect without prejudicing those
+persons.
+On the papers, the respondent additionally asserts that Mr Isiaka ought to be
+joined in the event that the Court confirms the cancellation of the contract. It appears
+from the reasoning adopted in this argument that the respondent paid the purchase
+price over to Mr Isiaka and that an order for cancellation and restitution would
+therefore require Mr Isiaka to repay the respondent such amount before the
+respondent was able to repay the applicant. This aspect of the non-joinder, however,
+was not pursued in argument where, as stated above, the respondent sought a
+joinder of the Department and Mr Isiaka only if special performance was sought. This
+was the correct approach, in my view.
+In any event, on the argument pursued by the respondent, the viability of the
+non-joinder was contingent upon the applicant’s seeking of the primary relief. Since
+that relief is no longer sought, this point falls by the wayside. It is accordingly not
+necessary to decide it.
+I turn now to the cancellation controversy.
+The parties’ arguments regarding the cancellation of the agreement
+The applicant’s case on this score is conceptually simple: the applicant says
+that the respondent bore a legal obligation to furnish the applicant, within reasonable
+time, with the necessary documentation to enable the applicant to effect transfer of
+the Ford Ranger to its name. This did not occur – at least, not until very late in the
+day – and thus the respondent breached the agreement.
+As I have it, this gives rise to two questions. First, did the applicant have a
+legal basis on which to seek cancellation; namely, was there a breach? Second, if
+the answer to the first question is yes, whether the facts of this matter warrant the
+applicant being granted the relief it seeks.
+As regards the question of the legal basis for the cancellation, the applicant
+relied heavily on Springfield Omnibus.3 In that case, the applicant sought an order
+that its agreement with the first respondent be cancelled, and that its payment of the
+purchase price of a bus be refunded against the return of the vehicle. The reason
+was that the first respondent had failed to do all things necessary for the registration
+of transfer of ownership of the bus into the name of the applicant.
+As in the present matter, the applicant in Springfield Omnibus contended that
+it was the duty of the first respondent to do all things necessary for the registration of
+transfer of ownership of the bus into the name of the applicant and that the first
+respondent had failed to do so. In consequence, so the argument ran, the first
+respondent's omission constituted a material breach of the agreement which entitled
+the applicant to cancel the sale.
+The court in Springfield Omnibus upheld the grounds of cancellation relied
+upon by the applicant for cancellation of the contract. In particular, and at pages 5
+to 6, the court found as follows:
+Springfield Omnibus Service Durban CC v Peter Maskell Auction CC & another JOL
+(N). This, in fact, was the sole authority invoked by the applicant on this point.
+“All that is required of an auctioneer is to ensure that delivery of the vehicle
+is passed to the purchaser once payment has been effected as well as to
+provide the purchaser with all documents as are necessary which would
+enable the purchaser to effect registration of transfer of ownership into his or
+her name. There is no doubt on the papers before me that the applicant
+made numerous requests to the first respondent to furnish the original
+certificate of registration as well written confirmation from the second
+respondent consenting to the registration of the bus in the applicant's name.
+These requests however fell on deaf ears.” (Emphasis added)
+Kruger J went on to hold that the fact that the papers were subsequently
+tendered did not change the fact that there had been a breach. This is stated at page
+as follows:
+“It is noted that the first respondent, by way of affidavit dated 2 March 2005,
+has now tendered the original documents to enable the applicant to effect
+registration of transfer of ownership into its name. However, this tender is far
+too late. The applicant was, in my opinion, accordingly entitled to cancel the
+contract which it duly did by letter dated 28 June 2004.” (Emphasis added).
+Likewise, the present applicant says that fact that the respondent defaulted on
+its obligation to deliver the vehicle registration documents (within a reasonable time)
+is enough to entitle it to cancel the agreement between the parties. In oral
+argument, the applicant’s counsel pressed the fact in the present case the
+respondent took some ten months to furnish the relevant. This, in circumstances
+where there were extensive efforts by the applicant during that period to obtain those
+papers and where, as I have indicated, the applicant cancelled the agreement by
+way of a letter dated 17 November 2020. This was in accordance with the principle in
+our law that an innocent party rescinds a contract by communicating that to the guilty
+party.4
+The applicant also made much of the fact that, at the time of the conclusion of
+the contract, it was not apprised of the proper state of affairs. In this regard, it says
+Datacolor International (Pty) Ltd v Intamarket (Pty) Ltd 2001 (2) SA 284 (SCA) at para 28.
+that it concluded the agreement under the misapprehension that the respondent was
+the owner of the Ford Ranger (this proved not to be so) and without knowing that the
+Ford Ranger would subsequently be (or was already) embroiled in investigations
+concerning whether its registration documents had been cloned.
+What is the respondent’s answer to all this? It disputes that the delay
+amounted to a breach of the agreement. Its primary answer is that the delay arose
+as a result of the discovery, following the conclusion of the agreement, that the
+registration documents were cloned, which precluded it from furnishing the applicant
+with the necessary documentation. This, it says, was an unforeseeable event.
+The respondent says that the solution to this difficulty lay outside its hands,
+and that the fulfilment of the respondent’s obligation required it to enlist the
+participation of the Department of Licencing and Mr Isiaka. Indeed, the respondent
+states that rather than sitting on its hands, it took positive steps – with the assistance
+of Mr Isiaka – and approached the Department of Licensing to obtain the required
+documentation in order to furnish these to the applicant to enable it to transfer
+ownership.
+The respondent says that its predicament did not end there. The Covid-19
+pandemic and the restrictions that were imposed upon the inhabitants of the country
+as a result worsened its position. More specifically, the respondent relies upon the
+limitations on the number of personnel in government offices which had impacted the
+provision of services by the Department of Licensing.
+The respondent asserts that it informed the applicant of the causes of the delay
+as these events were unfolding. In oral argument it also sought to distinguish
+Springfield Omnibus on the basis that the factual circumstances in that case were
+different and did not involve the consequences of the pandemic. The respondent
+further took issue with the fact that the applicant still seeks cancellation even though
+the respondent has (belatedly) now performed.
+In sum, then, the respondent accepts that it did not timeously perform its
+obligation, but it seeks salvation in the notion that it is not responsible for failure to
+perform. On this score, it says that it was temporarily impossible for it to meet its
+obligation which, it contends, excuses its failure to perform. As I understood its case,
+and to be precise, the respondent’s contention is not that performance was
+permanently impossible but that it was temporarily impossible, which occasioned
+(and ought to excuse) a delay of performance.
+Where does all this leave matters?
+Was the respondent in breach of the agreement?
+The applicant seeks an order that the sale and purchase agreement is
+cancelled and that the parties are placed in the position they would have been prior
+to conclusion of the contract. It is necessary to note that, under our law, cancellation
+of a contract is an extraordinary remedy, and an innocent party may only avail itself
+of it in certain circumstances.
+There are three dominant methods of cancelling a contract:
+34.1 Firstly, a party may cancel in terms of the common law where a breach
+occurred of a term “that goes to the root of the contract”. In such an instance,
+the materiality of the breach is a relevant factor in the determination of
+whether cancellation should be ordered or not.5
+34.2 Secondly, the contract may be cancelled if the contract contains a
+provision that affords a party such a right on the occurrence of a specific
+breach.6 This is cancellation clause. Whether a breach of the contract has
+been committed that allows the innocent party to rely on the cancellation
+clause is then a matter of interpretation of the contract.7
+34.3 Thirdly, a party may cancel a contract in the absence of a breach
+having occurred, unilaterally, and usually on notice. Whether a party is
+Oatorian Properties (Pty) Ltd v Maroun 1973 (3) SA 779 (A) at 784.
+Id at 784-785.
+North Vaal Mineral Co Ltd v The Lovasz 1961 (3) SA 604 (T) at 606.
+entitled to terminate a contract unilaterally in absence of a breach is not
+something provided for in the common law and depends on the terms of the
+contract under consideration.8 This legal principle is not engaged in the
+present case.
+On the current facts, I am persuaded by the applicant’s reliance on Springfield
+Omnibus that the respondent was indeed duty-bound to ensure that delivery of the
+vehicle was passed to the purchaser once payment had been effected and to
+provide the purchaser with all documents that were necessary which would enable
+the applicant to effect registration of transfer of ownership into its name. The duty to
+supply the necessary papers to the purchaser of a vehicle is, as was found in that
+case, one of the primary obligations of the seller in such a sale and purchase
+contract. In addition, I am in agreement with the finding in Springfield Omnibus that
+this is a duty that needs to occur timeously. Failure to perform such an obligation
+within a reasonable time after payment of the purchase price and delivery of the
+vehicle would therefore amount to a material breach of the contract.
+It is unnecessary here to focus too much on what would constitute a
+“reasonable time” for these purposes. In the current circumstances, I would think that
+one month was sufficient delay to occasion a breach (that being roughly the period
+after which the applicant sent its cancellation letter to the respondent). Nothing turns
+on this, however, because, in any event, I am satisfied that ten months after
+purchase of the Ford Ranger and payment of the purchase price by the applicant is
+certainly not a reasonable time within which to deliver the papers necessary to effect
+transfer into the applicant’s name. The respondent has therefore committed a
+material breach of the agreement, and, in my view, the applicant is entitled to cancel
+the agreement and seek restitution.
+This is not the end of the matter, however, as the respondent’s defence of
+temporary impossibility must be considered.
+Van Streepen & Germs (Pty) Ltd v The Transvaal Provisional Administration 1987 (4) SA 569 (A).
+Was it temporarily impossible for the respondent to perform its obligations
+and does this excuse the respondent’s delay?
+The general rule in our law is that impossibility of performance prevents the
+creation of obligations and if, after the conclusion of the contract, performance
+subsequently becomes objectively impossible, the obligation to perform is, generally,
+extinguished.9 In order to rely on impossibility, the impossibility must be objective in
+that no person could perform the obligation. Mere relative or subjective impossibility
+is therefore not a defence to non-performance of a contract and may justify the other
+party exercising an election to cancel.10
+The impossibility must arise through either vis major or casus fortuitous.
+Currently in our law there appears to be, as Christie’s Law of Contract in South
+Africa notes, no real distinction between these concepts, simply that the impossibility
+must arise from “any happening whether due to natural causes or human agency,
+that is unforeseeable with reasonable foresight and unavoidable with reasonable
+care.”11
+Impossibility can arise due to the conduct of a third party. In Bischofberger,12
+the parties had entered into an agreement for the sale of land. The respondent
+agreed that a third party would cede the proceeds of a sale of another portion of land
+to the applicant in lieu of obtaining a bank guarantee. The sale by the third party fell
+through and the cession became impossible for the third party to perform. The court
+held that this rendered performance impossible and the agreement therefore
+“ceased to exist”.13
+Ngcobo J described the underlying principle thus in Barkhuizen v Napier 2007 (5) SA 323 at
+para 75:
+“[The] common law does not require people to do that which is impossible. This principle is
+expressed in the maxim lex non cogit ad impossibilia - no one should be compelled to perform
+or comply with that which is impossible. This maxim derives from the principles of justice and
+equity that underlie the common law.”
+Unibank Savings and Loans (formerly Community Bank) v ABSA Bank 2000 (4) SA 191 (W)
+at 198B.
+Bradfield GB, Christie’s Law of Contract in South Africa 7ed 2016 (Lexis Nexis) page 548.
+Bischofberger v Van Eyk 1981 (2) SA 607 (W).
+Id at 611G.
+The usual consequence of supervening impossibility of performance is
+termination of the obligation. In Kudu Granite, the parties’ contract became void due
+to supervening impossibility as a result of a third party. The parties concluded a sale
+of shares and loan accounts in a certain company. The value of the loan account
+was in dispute and the contract provided that the parties would have 60 days to
+agree, failing which KPMG would determine the loan amount. As it turns out, KPMG
+was incapable of determining the loan amount.
+The court held that:
+“[the respondent’s] case was one of a lawful agreement which afterwards
+failed without fault because its terms could not be implemented. The
+intention of the parties was frustrated. The situation in which the parties
+found themselves was analogous to impossibility of performance since they
+had made the fate of their contract dependent upon the conduct of a third
+party (KPMG) who was unable or unwilling to perform.”14
+As a result, it is clear that impossibility can arise through the conduct of a third
+party, as the respondent seeks to assert in the current matter. The respondent does
+not, however, rely on impossibility as a basis to terminate the obligations, but rather
+seeks to assert that, because of what it deems “temporary impossibility”, its
+obligations to perform timeously ought to be excused.
+On the facts of this case, it does appear to me that an objective, albeit
+temporary, impossibility arose as a matter of fact. However, I am not convinced, for
+the reasons that follow, that this is sufficient to excuse the respondent’s failure to
+deliver the vehicle documents timeously to the applicant.
+All rules are, of course, susceptible to exceptions. Therefore, whilst the
+general rule in our law is that obligations are extinguished where performance after
+the conclusion of a contract becomes impossible due to no fault of the parties, this
+Kudu Granite Operations (Pty) Ltd v Caterna Ltd 2003 (5) SA 193 (SCA) at para 15.
+general rule is subject to an assessment of the “nature of the contract, the relation of
+the parties, the circumstances of the case and the nature of the impossibility.”15
+Examples of this can be seen in the following:
+46.1 Where the impossibility is self-created or due to the fault of the debtor
+then impossibility cannot be relied on as a defence to non-performance.16
+46.2 Where the impossibility was reasonably foreseeable, or the risk of the
+impossibility arising was within the contemplation of the parties at the time of
+concluding the contract, then the defence cannot be relied on.17
+46.3 Where a debtor takes on the risk of the impossibility in terms of the
+contract, then the debtor will still be liable in damages despite the
+impossibility.18 In Southern Era, this occurred as a matter of law following the
+perfection of a sale of mineral rights. Upon perfection, the risk transferred to
+the buyer. The intercession of a change to the law that rendered delivery
+impossible did not excuse the debtor (who had in law assumed the risk of
+destruction of the merx) from payment of the purchase price.
+46.4 In Oerlikon SA (Pty) Ltd v Jhb CC,19 the contract specifically provided
+that one party would bear the risk of “any accident, fire, drought, flood, frost
+or tempest”20 and the court accepted that the parties could do this.21
+46.5 In Nuclear Fuels, the plaintiff raised in its replication that the
+defendant’s reliance on the defence of impossibility could not succeed as the
+defendant had either guaranteed performance or alternatively had assumed
+Bischofberger above at 610H-611C.
+MV Snow Crystal, Transnet Ltd t/a National Ports Authority v Owner of MV Snow Crystal
+(4) SA 111 (SCA) at para 28.
+Nuclear Fuels Corp of SA (Pty) Ltd v Orda AG 1996 (4) SA 1190 (SCA) at 1209F-1210C.
+Southern Era Resources Ltd v Farndell NO 2010 (4) SA 200 (SCA).
+1970 (3) SA 579 (A).
+Id at 582B.
+Id at 585B-E.
+the risk of impossibility.22 On appeal, the Supreme Court of Appeal ultimately
+found that, on a proper interpretation of the contract, there was no such
+guarantee.23 However, what is instructive is that the court did not reject the
+argument as a matter of law, but engaged with the allegation and argument
+substantively to determine whether the contract did indeed contain such a
+guarantee. One may therefore draw the inference that the Court saw no
+issue with the proposition that a guarantee of performance, if proved, could
+displace reliance on impossibility.
+As explained above, I am convinced that the respondent in the present case
+breached its obligations in terms of the contract to timeously deliver the Ford Ranger
+documents to the applicant with the result that the applicant was unable to enjoy the
+use of the Ford Ranger it had purchased. The real issue is therefore what is to be
+made of the temporary impossibility raised by the respondent? Does this excuse the
+respondent’s late delivery with the effect that it may be said that the late delivery of
+the documents, some ten months later, did not constitute a material breach that
+entitled the applicant to cancel the agreement?
+By reason of the respondent’s raison d'etre as a second hand motor vehicle
+dealership, the impossibility that arose in this case did so principally because it
+transpired, only once the agreement had been concluded (and the purchase price
+paid and the Ford Ranger delivered), that the respondent was not, in fact, the owner
+of the Ford Ranger. The respondent did not have the papers for the vehicle and, it
+appears, had also not prior to the conclusion of the agreement pressed the true
+owner for these. Under those circumstances, my view is that the impossibility was
+either reasonably foreseeable on the part of the respondent; the risk of the
+impossibility arising was within the contemplation of the respondent at the time of
+concluding the agreement; or, at the very least, the respondent took on the risk of
+the impossibility in terms of the agreement.
+That being so, I find that the defence of temporary impossibility does not avail
+the respondent in the current matter. I thus conclude that the applicant was entitled
+Nuclear Fuels above at 1195G-H.
+Id at 1208B-H.
+to cancel the agreement, and properly did so by communicating the cancellation to
+the respondent in November 2020. On the facts of this case, the defence of
+temporary impossibility is unsustainable.
+Restitution
+It is trite that where a contract has been cancelled due to breach or otherwise,
+the general position is that each party is bound to restore to the other that which he
+or she has received in terms of the contract.24
+In the current case, it is therefore clear that the applicant must return the Ford
+Ranger to the respondent and that the respondent must repay the purchase price of
+R266 000.00 to the applicant.
+The applicant further seeks repayment of the amounts it incurred in improving
+and servicing the Ford Ranger. According to the applicant, total amount that arises
+from the invoices in this regard was R49 481.46. I am of the view that the respondent
+ought to refund the applicant for the improvements that the applicant made to the
+vehicle. This is in line with restoring the applicant to the position had the contract not
+been concluded. It is also fair, as the respondent will receive an improved and
+serviced Ford Ranger as a result of the services and repairs effected by the
+applicant.
+Final points
+The respondent’s counsel urged me that, in the event that I reached the
+conclusion at which I have arrived, that I order the applicant to pay rent for the period
+in which the Ford Ranger has been in the applicant’s possession. I am not
+persuaded that a case for this made out. It is common cause that the applicant has
+not been able to use the vehicle due to the respondent’s failure to provide it with the
+papers.
+Cash Converters Southern Africa (Pty) Ltd v Rosebud Western Province Franchise (Pty) Ltd
+(1) SA 708 (C) at 717G.
+The applicant seeks costs against the respondent on an attorney and client
+scale. Whilst the respondent’s actions left the applicant in an undesirable position, I
+am not persuaded that the facts warrant costs being paid on an attorney and client
+scale.
+Conclusion
+I accordingly conclude that the respondent materially breached the sale and
+purchase agreement regarding the Ford Ranger. The applicant was therefore
+entitled to cancel the agreement and validly did so by communicating this election to
+the respondent. In addition, I find that the respondent has not succeeded in raising a
+defence of temporary impossibility in the current circumstances.
+I therefore make the following order:
+56.1 The agreement between the parties was duly cancelled;
+56.2 The respondent is ordered to refund the purchase price of the Ford
+Ranger (R266 000.00) to the applicant;
+56.3 The respondent is ordered to pay to the applicant the amount of
+R49 481.46 for repairs, improvements and service that was done to the Ford
+Ranger;
+56.4 The applicant is ordered to return the Ford Ranger to the respondent
+within one day of receiving the refund of the purchase price of the Ford
+Ranger as well as the aforesaid amount for repairs, improvements and
+service that was done to the Ford Ranger;
+56.5 The respondent is ordered to pay the applicant’s costs on a party and
+party scale.
+Acting Judge of the High Court,
+Gauteng Local Division, Johannesburg
+Delivered: This judgement was prepared and authored by the Judge whose name is
+reflected and is handed down electronically by circulation to the Parties/their legal
+representatives by email and by uploading it to the electronic file of this matter on
+CaseLines. The date for hand-down is deemed to be 14 February 2022
+Date of hearing: 06 September 2021
+Date of judgment: 14 February 2022
+Appearances:
+For the applicant: Sanele Fezile Sibisi
+Instructed by: QQ Mkhatshwa Incorporated Attorneys
+For the respondent: Sandra Makoasha
+Instructed by: Sibanda Bukhosi Attorneys Inc

@@ -1,0 +1,200 @@
+1
+SAFLII Note: Certain personal/private details of parties or witnesses have been redacted from this
+document in compliance with the law and SAFLII Policy
+REPUBLIC OF SOUTH AFRICA
+IN THE HIGH COURT OF SOUTH AFRICA
+GAUTENG LOCAL DIVISION, JOHANNESBURG
+CASE NO: 25644/2014
+(1) REPORTABLE: YES/NO
+(2) OF INTEREST TO OTHER JUDGES: YES/N O
+(3) REVISED
+_________ ______________________
+Date: WHG VAN DER LINDE
+In the matter between:
+ZONDO, NWABISA PLAINTIFF
+and
+THE MEC FOR HEALTH OF THE GAUTENG
+PROVINCIAL GOVERNMENT DEFENDANT
+JUDGMENT
+Van der Linde, J:
+2
+[1] In this trial action the parties have agreed to separate, under rule 33(4), the defendant’s
+application for an amendment to his plea from the other issues that arise between the
+parties on the pleadings. The postponement of the other issues is a forgone conclusion
+because the matter will not be allocated a trial judge in respect of those, for reasons related
+to non-compliance with Practice Directives of this court. This latter fact has a costs
+implication to which I will return below. I will make an appropriate separation order at the
+end of the judgment. I am required to decide the amendment, the costs of the amendment,
+and the costs of the postponement of the rest of the issues. I deal with these issues in turn.
+[2] The amendment is to introduce the plea of prescription. The plaintiff claims from the
+defendant R21,5m as damages for the defendant’s breach of contract alternatively of a
+delictual duty of care after her minor son, O, born 9 October 2007, suffered permanent brain
+damage during and immediately after birth as a result of the negligence of the defendant’s
+staff at the Natalspruit and Chris Hani Baragwanath Hospitals. The claim is made up of future
+medical expenses (R12m), future loss of earning (R5m), general damages (R3m), and the
+costs associated with the protection of funds (R1,5m).
+[3] The plaintiff sues in her representative capacity as mother and natural guardian of her minor
+son. The minor’s claims will not become extinguished by prescription until a year after he
+becomes a major at the age of 18.1
+[4] The defendant’s special plea contends that properly construed, the plaintiff’s claims all,
+except the R3m claim for general damages, are claims of the parents and not the minor
+child; and that those claims, thus in the aggregate amounting to R18,5m, have been
+extinguished by prescription. In other words, there is in the case of the parents no delay of
+prescription as applies in the case of the minor.
+[5] Since the defendant’s application is for an amendment and since one is not now concerned
+with the merits of the proposed special plea, the question is merely whether the special
+1 S.13(1)(a) of the Prescription Act 68 of 1969.
+3
+plea, if allowed, will raise a legally sustainable defence. Questions of the timing of the
+application do not come into it, since prescription may be raised “… at any stage of the
+proceedings.”2
+[6] The objection against the proposed amendment is the mirror image of the proposed special
+plea. It is that the claim is in truth the plaintiff’s claim in her representative capacity; it is not
+the plaintiff’s claim in her personal capacity.
+[7] The issue here is therefore not whether the plaintiff has a contractual or delictual claim for
+future loss of earnings and future medical expenses, assuming that her son was negligently
+injured by the hospital staff. The question is whether the minor has such a claim, whether
+concomitantly with the mother’s claim or not.
+[8] It seems to me that Guardian National Insurance Co Ltd v Van Gool, NO,3 referred to by Mr
+Pauw, SC who appeared with Ms Mansingh for the defendant, is in point against the
+defendant. In that case the father of a minor, who was injured when a motor vehicle ran her
+over, sued the relevant insurance company under the Compulsory Motor Vehicle Insurance
+Act 56 of 1972 in his representative capacity for future medical expenses, future loss of
+earnings and general damages. The question was whether the claim for future medical
+expenses was a claim of the father or of his minor daughter.
+[9] In the judgment of the then Appellate Division, Joubert JA for the court examined the origins
+of the claim for bodily injuries. The learned judge explained that when the actio legis
+Aquiliae was originally enacted in 286 BCE, it did not include a claim for bodily injuries. In
+time the Praetor extended the remedy to include compensation for patrimonial loss in
+respect of bodily injuries. This included claims for future loss of earnings.
+2 S.17(2) of the Prescription Act.
+3 1992 (4) SA 61 (AD).
+4
+[10] In Roman Law only the paterfamilias could institute the claim, and not the filiusfamilias; this
+is because the paterfamilias was the only one that paid the bills. If the filiusfamilias acquired
+anything at all, this was acquired, virtually in a socialistic sense, by the paterfamilias.4
+[11] Although the Dutch lawyers allowed the claim, when it was received there many year later,
+to include a claim for non-patrimonial losses, such as for pain and suffering, in this country
+first the Cape Provincial Division in Hoffa NO v SA Mutual Fire & General Insurance Co Ltd5
+and then the Appellate Division in Government of the Republic of South Africa v Ngubane,6
+held that the claim for non-patrimonial loss was a claim sui generis, and did not fit the actio
+legis Aquiliae.
+[12] Joubert JA pointed out however that the Dutch never accepted the Roman concept of a
+patriarchal family reigned over by a paterfamilias. Roman-Dutch law did however consider
+that parents had parental authority over the minor children, and by operation of the natural
+law there was a reciprocal duty of support between parents and children, the extent of
+which was determined by their means.7
+[13] In dealing with the potential claims of a minor, Joubert JA held (emphasis supplied):8
+“Natural persons acquire at birth legal capacity (regsbevoegdheid) to have or possess legal
+rights and duties. See Boberg The Law of Persons and the Family 1977 at 37-41, 529. A minor
+may at birth or at any time during minority inherit property and become the owner thereof.
+He may have an estate of his own with an income, as appears from numerous references in
+the authorities, for example Van der Keessel ad Gr 1.6.1, 3; Lee and Honoré (op cit para
+148(i)-(iv), (vi)).
+In the present matter Catherine has no assets or income of her own. Since she is not self-
+supporting to maintain herself, there is accordingly available to her a right to claim support
+4 Van Gool, NO at 64 in fin.
+5 1965(2) SA 944 (C).
+6 1972 (2) SA 601 (A).
+7 Van Gool, NO, at 65 in fin to 66A.
+8 Op cit, at 66 C to F.
+5
+from her parents to pay, according to their means, her prospective medical and hospital
+expenses. But as the victim of a delict perpetrated against her she also has an additional
+legal right to claim compensation from the wrongdoer for general damages relating to non-
+patrimonial loss (such as pain and suffering, loss of amenities, disfigurement and loss of
+expectation of life) as well as prospective patrimonial loss such as future medical and
+hospital expenses and future loss of earnings. The delictual liability of the wrongdoer (Van
+Gool in his personal capacity) arising from the collision falls ex lege on the appellant as an
+authorised insurer of the motor vehicle in terms of the provisions of the Act.
+A minor has no locus standi in judicio to appear on his own in civil proceedings. Voet 5.1.10,
+11; Herbstein and Van Winsen The Civil Practice of the Superior Courts in South Africa (1966)
+at 142. He requires the assistance of a guardian or a curator ad litem in Court. Wolman and
+Others v Wolman 1963 (2) SA 452 (A) at 459A-B. In the case of an infans below the age of
+seven years the practice is that the guardian or curator ad litem should sue or be sued in his
+representative capacity. Lee and Honoré (op cit para 149). That procedure was in fact
+adopted in the present matter since Van Gool instituted the action in his capacity as father
+and natural guardian of Catherine. He did not personally claim any relief. The special plea is
+directed at the fact that he sued in his representative and not his personal capacity. It is
+Catherine and not Van Gool who is party to the action as plaintiff. Mokhesi NO v Demas 1951
+(2) SA 502 (T) at 503E; Greyling v Administrator, Natal 1966 (2) SA 684 (D) at 689A-B.”
+[14] So Van Gool made it plain that a minor has a claim for prospective patrimonial loss such as
+future medical and hospital expenses and future loss of earnings. Van Gool has not been
+overruled by the Constitutional Court, nor departed from by the Supreme Court of Appeal. It
+is thus binding on this court. In my view the present case is indistinguishable, and the
+contentious claims preferred here are, as in Van Gool, at least also claims of the minor.
+[15] Mr Pauw submitted that Van Gool was distinguishable, since it was not concerned with
+prescription, as this case is. It does not appear that prescription was expressly raised in Van
+6
+Gool, but I do not see how that affects the principle. The principle at issue here concerns
+whether a minor suffers damages of the nature with which we are concerned and, if so,
+whether his guardian has the right to claim them on behalf of the minor. Van Gool held that
+the minor and her guardian have those rights. Prescription, especially strong prescription, is
+concerned with extinguishing rights as a result of inaction; it is not concerned with
+identifying the repository of those rights.
+[16] It follows that the objection to the amendment is well-taken, and the application to amend
+must be disallowed. Costs of the application must follow the result.
+[17] That leaves the costs of the postponement of the rest of the issues. One does wonder what
+those costs might be, because the trial did start, but did not run its course. That is however a
+matter for the taxing master. As to liability for those costs, Mr Pauw submitted that at roll
+call on 29 August 2016 the real issue that concerned the Deputy Judge President, was the
+fact that the further pretrial conference which the letter of 26 July 2016 directed, was left
+for as late as 19 August 2016. He said that the plaintiff’s response to the letter of the Deputy
+Judge President was to propose a pretrial conference for 18 August, not earlier; which then
+in the event could not be pulled off until the next day.
+[18] Mr Strydom, SC who appeared for the plaintiff with Ms Viljoen, submitted that the parties
+would not have been in the position of poor pretrial performance had it not been for the
+defendant’s reticence in responding to the questions posed at the pretrial conferences held
+earlier this year.
+[19] The difficulty with delays is that ultimately squeeze trial readiness into an impossible frenzy,
+is that one is always able to point back in time to some earlier delaying performance
+upstream and then, looking forward again, to aggregate those to arrive at an explanation for
+why things are not ready when they should be.
+[20] In practice however things have a way of developing such that there comes a time when
+parties are required to have a sense of urgency, absent which a matter will not be ready for
+7
+trial allocation. Put differently, there comes a time when some things are on the critical path
+of trial allocation readiness, but others are not.
+[21] I am afraid that the plaintiff’s email of 1 August 2016 concerned a matter which was on the
+critical path of trial allocation readiness, but the email did not display the required sense of
+urgency. The trial had been set down for Tuesday 23 August 2016, and three weeks away
+meant that the pretrial conference which the Deputy Judge President directed, could not
+wait until the Friday before the trial.
+[22] In my view the plaintiff was thus primarily responsible for the failure of this matter being
+allocated a trial judge, and the plaintiff should be ordered to pay the wasted costs
+occasioned by the postponement.
+[23] In the result I make the following order:
+(a) The issue of the defendant’s application dated 26 August 2016 to amend his plea to
+introduce the plea of prescription, is separated from the other issues that arise between
+the parties on the pleadings, and it is directed that the trial of those other issues so
+separated is postponed sine die.
+(b) The plaintiff is directed to pay the costs wasted as a result of the postponement referred
+to in the previous paragraph, such costs to include the costs occasioned by the
+employment of two counsel.
+(c) The defendant’s application dated 26 August 2016 for an amendment of its plea is
+refused with costs, such costs to include the costs occasioned by the employment of two
+counsel.
+WHG van der Linde
+Judge, High Court
+Johannesburg
+8
+For the plaintiff: Adv. G.J. Strydom, SC
+Adv. A. Viljoen
+Instructed by: Mokoduo Attorneys
+Office 1001, 10th Floor
+Bedford Centre Office Towers
+Smith Road, Bedford Gardens
+Bedfordview
+Johannesburg
+Tel: 011 615 2872
+Ref: RE/DP/Z16
+For the defendant: Adv. P. Pauw, SC
+Adv. R. Mansingh
+Instructed by: The State Attorney
+10th Floor, North State Building
+95 Market Street
+Johannesburg
+Tel: 011 330 7612
+Ref: 2089/14/P4/SMI472
+Date argued: 29 August 2016
+Date of judgment: 02 September 2016

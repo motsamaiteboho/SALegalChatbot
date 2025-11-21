@@ -1,0 +1,213 @@
+JUDGMENT
+delivered on 07 April 2011
+
+SWAIN J
+ The appellant challenges the decision of the Magistrate at
+Pinetown, in which two preliminary issues, placed before the
+Magistrate in terms of Rule 29 (4) of the Magistrates’ Court Rules,
+were decided in favour of the respondent.
+ The two issues were:
+[2.1] Whether the appellant’s notice (plaintiff in the Court a
+quo) in terms of Clause 12 of the agreement, was a proper notice, it
+being the respondent’s contention (defendant in the Court at quo) that
+because the notice was sent by the appellant’s attorney and not the
+conveyancer, it was invalid, thereby non-suiting the appellant.
+[2.2] Whether the appellant’s alternative cause of action, based
+in delict is sustainable in law, it being the respondent’s contention that
+it is not.
+ Clause 12 of the agreement provides as follows:
+“MORA INTEREST
+In the event of there being any delay in connection with the registration of
+transfer for which the PURCHASER is responsible, the PURCHASER
+undertakes, in addition to any payments due in terms of clauses 3 and 8, to pay
+interest on the purchase price at the rate of 18% per annum, calculated from the
+date on which the PURCHASER is notified in writing by the Conveyancers as
+being in mora to date upon which the PURCHASER has ceased to be in mora,
+both dates inclusive”.
+ It is trite that the provisions of Clause 12 must be interpreted in
+the context of the agreement as a whole
+Swart v Cape Fabrix (Pty) Ltd.
+(1) SA 195 (A) at 202 C
+ Additional clauses in the contract, which are relevant to such an
+exercise are the following:
+[5.1] Clause 3.3 which provides that the amount of
+R800,000.00 (referred to in paragraph 6.2 of the Schedule), payable
+from the sale of the purchaser’s property
+“. shall be paid in accordance with the written directions of the conveyancers
+and shall, on their written request be secured by bank, or other guarantees
+acceptable to the seller”.
+[5.2] Clause 9 which provides that the costs of and incidental
+to the preparation and registration of the documents of transfer and
+bond, including transfer and stamp duty plus any Value Added Tax
+payable on such costs, shall be borne by the purchaser and paid to
+the conveyancers “on their request”. It also provides that the
+documents related to the transfer shall be prepared and registered by
+the seller’s conveyancers, and both parties agreed to supply the
+conveyancers “on request” with all documentation and information
+necessary, in order to prepare transfer and/or bond documents. They
+also undertook to sign all transfer and bond documents “on request by
+the said conveyancers”.
+[5.3] Clause 15 which provides that in the event of the
+purchaser failing to pay any amounts due in terms of the agreement,
+or to furnish guarantees on the due date, or in the event of the
+purchaser committing a breach of any of the other provisions of the
+agreement, the seller is entitled to give written notice requiring the
+purchaser to make such payments, or to furnish such guarantee, or to
+remedy such breach, within seven days after receipt of the notice. If
+the purchaser is still in default at the expiration of the notice, the
+seller is entitled to enforce the agreement and/or to declare the full
+amount of the purchase price to be immediately due and payable, or
+to cancel the agreement. It further provides that whatever action the
+seller may choose, shall be without prejudice to the right of the seller
+to claim damages.
+ It is therefore clear that the parties to the contract, accorded to
+the conveyancers, the right to determine when performance was due
+by the respondent (purchaser) to the appellant (seller) in terms of the
+contract. This is so whether the performance required was the
+payment of the balance of the purchase price from the proceeds of
+the sale of the respondent’s property, the furnishing of guarantees by
+the respondent to secure payment of this amount, the costs of
+transfer, as well as the signature of documents to effect transfer.
+ Seen in this context the conveyancers would be the party pre-
+eminently qualified to determine, for the purposes of Clause 12,
+firstly, whether there has been a delay “in connection with the registration
+of transfer” and secondly, of greater importance, whether the
+respondent “is responsible” for the delay. The clause clearly confers
+upon the conveyancers the power to make a value judgment on the
+conduct of the respondent and to then notify the respondent in writing
+that the respondent in placed in mora. It is also clear that the
+conveyancers are conferred with the power, to determine the date
+from which the respondent will be deemed to be in mora. It is from
+this date that the respondent will be obliged to pay interest at the rate
+of eighteen per cent per annum, until the respondent ceases to be in
+mora.
+ I find it difficult, regard being had to the aforegoing, to accord to
+Clause 12 the meaning contended for by the appellant, namely that in
+addition to the conveyancers, the appellant enjoyed the right as
+seller, to furnish such notice to the respondent, and thereby place the
+respondent in mora for the purposes of this Clause. Mr. de Beer S C,
+who appeared for the appellant, argued that this was so because
+there was nothing in the agreement to prevent the appellant from
+giving notice herself. In addition, the conveyancers were nominated
+by the appellant as conveyancers in terms of the agreement and it
+was therefore permissible for the appellant, as principal, to give the
+notice which the conveyancers, as the appellant’s agent, had failed to
+do. It is however clear, as submitted by Mr. Collingwood, who
+appeared for the respondent, that the mere fact that a conveyancer is
+nominated by one of the parties, does not mean that he acts
+exclusively as the agent for that party, in all of the functions the
+conveyancer performs in terms of the contract. In accepting the
+appointment as conveyancer in respect of the transaction between
+the appellant and the respondent, the conveyancer became the agent
+of both parties.
+Basson v Remini & another
+(2) SA 322 (N) at 328 A – B
+The value judgment which I have found was conferred upon the
+conveyancers to determine whether a delay in the registration of
+transfer was the responsibility of the respondent, independently of the
+appellant, finds support in those cases, referred to by Mr.
+Collingwood, where a party to a contract nominates an independent
+professional third person who, although an agent of the principal
+nominating party, is also required to exercise an independent
+professional judgment. Mr. Collingwood submits that the well known
+example in building contracts where the principal appoints an
+architect, engineer, or quantity surveyor, who is required to exercise
+their own professional judgment, as to whether or not the contract
+has been performed, or how it is to be performed, finds equal
+application on the facts of the present case. It is clear that the status
+of such an individual, may depend not only on the wording of the
+relevant clause in the contract, but also on the nature of the dispute
+Universiteit van Stellenbosch v J A Louw
+(4) SA 321 (A) at 337 C
+The conveyancers in the present case have obviously not been
+vested with the power in question, to determine any disputes between
+the parties, but are clearly vested with the power to independently
+decide whether the respondent is responsible for any delay in
+connection with the registration of transfer and to place the
+respondent in mora, as a consequence. That the appellant
+possesses an independent power in terms of Clause 12 to decide
+that the respondent is responsible for any delay and to give the
+necessary notice placing the respondent in mora, purely on the basis
+that the appellant nominated the conveyancers concerned, who
+therefore occupy a position akin to that of a principal in the law of
+agency, is not supported by the provisions of Clause 12.
+ Mr. de Beer S C, in aid of his argument submitted that should
+the conveyancers refuse, for whatever reason to place the purchaser
+in mora, the seller would be left in an intolerable position without
+remedy. I find it unnecessary to decide whether the seller in such a
+situation would be remediless against the conveyancers because, in
+my view, the seller’s remedy is to be found in the provisions of Clause
+15. If the purchaser after being called upon to perform by the
+conveyancer, fails to pay any amounts due, or fails to furnish
+guarantees on due date, or fails to sign any document, the seller
+would be entitled independently and in terms of this Clause to afford
+the purchaser seven days, within which to remedy the breach. In the
+event of the purchaser failing to do so, the seller would have at its
+disposal, all of the remedies provided for in Clause 15. In my view,
+when Clauses 12 and 15 are examined in the context of the contract
+as a whole, it is clear that they provide for two independent avenues
+to be pursued, by the conveyancers and the seller respectively, to
+compel compliance by the purchaser with her obligations in terms of
+the contract, with an obvious bar to the enforcement of inconsistent
+remedies. An example of the latter would be where the seller after
+due notice to the purchaser in terms of Clause 15, elected to cancel
+the contract, this would obviously preclude a claim for interest on the
+balance of the purchase price, payable in terms of a notice given by
+the conveyancers to the purchaser.
+ In the result the appellant’s attorney was not entitled to give
+notice to the respondent placing the respondent in mora in terms of
+Clause 12.
+ Turning to the alternative cause of action based in delict for
+payment of damages as a result of the delay in effecting transfer.
+The appellant’s cause of action appears to be based upon the
+contention that the respondent owed a duty of care to disclose to the
+appellant, that there might be delays in the registration of transfer,
+arising out of the winding up of the estate of the respondent’s late
+husband.
+ The following dicta of Grosskopf A J A (as he then was) in
+Lillicrap, Wassenaar & Partners v Pilkington Brothers
+(1) 475 (A) at 500 F – G and 501 E – F
+are apposite.
+“In considering whether an extension of Aquilian liability is justified in the present
+case, the first question that arises is whether there is a need therefor. In my
+view, the answer must be in the negative, at any rate in so far as liability is said
+to have arisen while there was a contractual nexus between the parties. While
+the contract persisted, each party had adequate and satisfactory remedies if the
+other were to have committed a breach. Indeed the very relief claimed by the
+respondent could have been granted in an action based on breach of contract”.
+“Apart from defining the parties’ respective duties (including the standard of
+performance required) a contract may regulate other aspects of the relationship
+between the parties. Thus, for instance, it may limit or extend liability, impose
+penalties or grant indemnities, provide special methods of settling disputes (eg
+by arbitration) etc. A Court should therefore in my view be loath to extend the
+law of delict into this area and thereby eliminate provisions which the parties
+considered necessary or desirable for their own protection”.
+ In the present case the appellant had effective remedies in
+terms of Clause 15 to deal with any breach by the respondent. In
+addition, Clause 12 made detailed provision for the role of the
+conveyancers, in ensuring compliance by the respondent with her
+obligations in terms of the agreement. To accord to the appellant a
+cause of action based in delict, would have the effect of eliminating
+provisions in the agreement, which the parties considered necessary
+or desirable, for their own protection.
+ The appellant is accordingly not entitled to such an alternative
+cause of action based in delict.
+The order I make is the following
+a) The appeal is dismissed.
+b) The appellant is ordered to pay the
+respondent’s costs.
+
+K SWAIN J
+I agree
+
+BOOYENS A J
+Appearances /
+Appearances:
+For the Appellant : Mr. A. de Beer S C
+Instructed by : Patrick Lander Attorney
+C/o Tatham Wilkes Inc
+For the Respondent : Mr. A. D. Collingwood
+Instructed by : Mariam Cassim Associates
+Pinetown
+Date of hearing : 04 April 2011
+Date of Judgment : 07 April 2011
