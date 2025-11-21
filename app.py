@@ -25,11 +25,31 @@ with open("metadata/case_metadata_core_with_paths.json", "r", encoding="utf-8") 
 
 docs = []
 for case in cases_metadata:
-    if case.get("cleaned_text_path"):
-        text_path = Path(case["cleaned_text_path"])
-        if text_path.exists():
-            text = text_path.read_text(encoding="utf-8")
-            docs.append(Document(page_content=text, metadata=case))
+    raw_path = case.get("cleaned_text_path")
+    if not raw_path:
+        continue
+
+    # 1) Normalise Windows-style backslashes to POSIX-style
+    normalized_path = raw_path.replace("\\", "/")
+
+    # 2) Build a Path relative to the app root
+    text_path = Path(normalized_path)
+
+    try:
+        # 3) Skip if the file doesn't actually exist on the slug
+        if not text_path.is_file():
+            continue
+
+        text = text_path.read_text(encoding="utf-8")
+        docs.append(Document(page_content=text, metadata=case))
+
+    except OSError:
+        # Handles cases like "filename too long" or invalid paths on Linux
+        # Just skip those problematic entries
+        continue
+
+print(f"✅ Loaded {len(docs)} documents and {len(docs)} raw texts.")
+
 
 splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
 chunked_docs = [Document(page_content=chunk, metadata=d.metadata)
