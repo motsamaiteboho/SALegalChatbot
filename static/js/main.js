@@ -52,12 +52,36 @@ function addEmptyState() {
 
   const div = document.createElement("div");
   div.id = "emptyState";
-  div.className = "chat-empty";
+  div.className = "d-flex flex-column align-items-center chat-empty";
+
   div.innerHTML = `
     <h5 class="mb-2">Welcome to South African Case-Law Assistant</h5>
     <p class="text-secondary-emphasis mb-0">
       Ask questions on South African law of delict
     </p>
+
+    <div class="d-flex align-items-start gap-2 pt-4">
+      <button
+        type="button"
+        class="btn btn-sm text-dark example-question"
+      >
+        When is a statement defamatory in South African law?
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-sm text-dark example-question"
+      >
+        What must a plaintiff prove to succeed in delict?
+      </button>
+
+      <button
+        type="button"
+        class="btn btn-sm text-dark example-question"
+      >
+        How do courts determine wrongfulness in negligence?
+      </button>
+    </div>
   `;
 
   messagesDiv.appendChild(div);
@@ -67,7 +91,18 @@ function addEmptyState() {
   if (chatContent) {
     chatContent.classList.add("center-content");
   }
+
+  // Re-bind example-question button events
+  document.querySelectorAll(".example-question").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      queryInput.value = btn.textContent.trim();
+      updateSendState();
+      sendMessage();
+    });
+  });
 }
+
+
 
 function updateSendState() {
   const trimmed = queryInput.value.trim();
@@ -355,7 +390,6 @@ function renderSources(sources) {
 }
 
 function resetConversation() {
-  chatHistory.length = 0;
   addEmptyState();
   renderHistory();
   renderSources([]);
