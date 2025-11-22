@@ -3,226 +3,175 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>⚖️ SA Legal Chatbot</title>
+    <title>⚖️ SAFLII Legal Case-Law Assistant</title>
 
-    <!-- ✅ Bootstrap 5 -->
+    <!-- Bootswatch theme -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/superhero/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- ✅ Marked.js (Markdown → HTML) -->
+
+    <!-- Custom CSS -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+
+    <!-- Markdown parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-    <style>
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        background-color: #f8f9fa;
-      }
-
-      #chatbox {
-        display: flex;
-        flex-direction: column;
-        height: calc(100vh - 20px); /* Full height minus page padding */
-        max-width: 1400px;
-        margin: auto;
-        background: #fff;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-
-      h3 {
-        text-align: center;
-        margin-bottom: 15px;
-      }
-
-      /* Chat messages area */
-      #messages {
-        flex: 1;
-        overflow-y: auto;
-        padding-right: 5px;
-        margin-bottom: 10px;
-      }
-
-      /* Chat bubbles */
-      .message {
-        margin-bottom: 1rem;
-      }
-
-      .user-msg {
-        text-align: right;
-      }
-
-      .user-bubble,
-      .bot-bubble {
-        display: inline-block;
-        padding: 10px 15px;
-        border-radius: 15px;
-        max-width: 80%;
-        white-space: pre-wrap;
-      }
-
-      .user-bubble {
-        background-color: #007bff;
-        color: white;
-      }
-
-      .bot-bubble {
-        background-color: #e9ecef;
-        color: #212529;
-      }
-
-      /* Fixed bottom input area */
-      .input-group {
-        position: sticky;
-        bottom: 0;
-        background: #fff;
-        border-top: 1px solid #dee2e6;
-        padding-top: 10px;
-      }
-
-      textarea {
-        resize: none;
-        border-radius: 10px 0 0 10px;
-      }
-
-      button {
-        border-radius: 0 10px 10px 0;
-      }
-
-      #loading {
-        display: none;
-        text-align: center;
-        color: #6c757d;
-      }
-    </style>
   </head>
-  <body>
-    <div id="chatbox" class="border p-4">
-      <h3>⚖️ South African Legal Chatbot</h3>
 
-      <!-- Scrollable messages -->
-      <div id="messages"></div>
+  <body class="bg-light d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar navbar-expand-lg bg-dark" data-bs-theme="dark" shadow-sm">
+      <div class="container-fluid">
+        <span class="navbar-brand fw-semibold">
+          ⚖️ SAFLII Legal Case-Law Assistant
+        </span>
 
-      <div id="loading"><em>Thinking…</em></div>
+        <div class="d-flex gap-2 ms-auto">
+          <button
+            id="newConversationBtn"
+            class="btn btn-secondary btn-sm"
+            type="button"
+          >
+            New conversation
+          </button>
 
-      <!-- Always at bottom -->
-      <div class="input-group">
-        <textarea
-          id="query"
-          class="form-control"
-          placeholder="Ask about a South African legal case..."
-          rows="2"
-        ></textarea>
-        <button id="sendBtn" class="btn btn-primary" onclick="sendMessage()">
-          Send
-        </button>
+          <button
+            class="btn btn-secondary  me-2"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#historyDrawer"
+          >
+            📘 History
+          </button>
+
+          <button
+            class="btn btn-secondary "
+            data-bs-toggle="offcanvas"
+            data-bs-target="#sourcesDrawer"
+          >
+            📚 Sources
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="flex-grow-1 py-3 bg-white text-dark ">
+      <div id="chatbox" class="container-xxl">
+        <div class="chat-header text-center mb-3">
+            <p class="text-secondary-emphasis mb-0 bg-light bg-opacity-10 border border-info border rounded-end">
+              This assistant focuses on the <strong>Law of Delict</strong> and
+              provides responses strictly grounded in
+              <strong>SAFLII case law</strong>, including principles of
+              defamation, negligence, wrongfulness and causation.
+            </p>
+          </div>
+        <div class="chat-card shadow-sm">
+          <div class="content py-4">
+            <!-- Messages -->
+            <div id="messages" class="chat-messages position-relative">
+              <!-- Empty state -->
+              <div id="emptyState" class="d-flex flex-column align-items-center">
+                <h5 class="mb-2">
+                  Welcome to South African Case-Law Assistant
+                </h5>
+                <p class="text-secondary-emphasismb-0">
+                  Ask questions on South African law of delict - all answers are grounded in SAFLII case law.
+                </p>
+              </div>
+            </div>
+
+            <!-- Thinking indicator -->
+            <div id="loading" class="chat-loading" style="display: none">
+              <div class="spinner-border spinner-border-sm me-2"></div>
+              <em>Thinking…</em>
+            </div>
+
+            <!-- Input area -->
+            <div class="chat-input border">
+              <div class="input-group">
+                <textarea
+                  id="query"
+                  class="form-control"
+                  placeholder="Ask a South African legal question..."
+                  rows="2"
+                ></textarea>
+                <button class="btn btn-secondary" onclick="sendMessage()">
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer with disclaimer -->
+    <footer class="mt-auto bg-dark text-light small py-3">
+      <div
+        class="container-xxl d-flex flex-column flex-md-row justify-content-between gap-2"
+      >
+        <span> © {{ 2025 }} My Legal Assistant. All rights reserved. </span>
+        <span class="text-muted">
+          This tool is for informational purposes only and does not constitute
+          legal advice. It is limited to South African law and may contain
+          inaccuracies. Always consult a qualified legal practitioner before
+          acting on any information provided.
+        </span>
+      </div>
+    </footer>
+
+    <!-- Drawer for history & sources -->
+    <!-- 🔵 HISTORY DRAWER -->
+    <div
+      class="offcanvas offcanvas-end"
+      id="historyDrawer"
+      tabindex="-1"
+      aria-labelledby="historyDrawerLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 id="historyDrawerLabel">Conversation History</h5>
+        <button
+          class="btn-close"
+          type="button"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body drawer-scroll">
+        <div id="historyList" class="list-group list-group-flush small">
+          <div class="p-2 text-muted">No questions yet.</div>
+        </div>
       </div>
     </div>
 
-    <script>
-      const messagesDiv = document.getElementById("messages");
-      const loading = document.getElementById("loading");
-      const queryInput = document.getElementById("query");
+    <!-- 🟢 SOURCES DRAWER -->
+    <div
+      class="offcanvas offcanvas-end"
+      id="sourcesDrawer"
+      tabindex="-1"
+      aria-labelledby="sourcesDrawerLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 id="sourcesDrawerLabel">Sources & Summaries</h5>
+        <button
+          class="btn-close"
+          type="button"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
 
-      async function sendMessage() {
-        const query = queryInput.value.trim();
-        if (!query) return;
+      <div class="offcanvas-body drawer-scroll">
+        <div id="sourcesList" class="small text-muted">No sources yet.</div>
+      </div>
+    </div>
 
-        // --- User bubble ---
-        const userDiv = document.createElement("div");
-        userDiv.classList.add("message", "user-msg");
-        userDiv.innerHTML = `<div class="user-bubble">${query}</div>`;
-        messagesDiv.appendChild(userDiv);
-
-        // Clear textarea
-        queryInput.value = "";
-        loading.style.display = "block";
-        messagesDiv.scrollTop = messagesDiv.scrollHeight;
-
-        try {
-          const res = await fetch("/ask", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ query }),
-          });
-
-          const data = await res.json();
-
-          // --- Convert markdown → HTML ---
-          const htmlAnswer = marked.parse(data.answer);
-
-          // --- Bot bubble for answer ---
-          const botDiv = document.createElement("div");
-          botDiv.classList.add("message");
-          botDiv.innerHTML = `<div class="bot-bubble">${htmlAnswer}</div>`;
-
-          // --- If backend returned retrieved chunks, show them ---
-          if (data.sources && data.sources.length > 0) {
-            const sourcesId = `sources-${Date.now()}`;
-            const collapseId = `collapse-${Date.now()}`;
-            const sourcesDiv = document.createElement("div");
-            sourcesDiv.classList.add("mt-2");
-
-            let sourcesHTML = `
-          <div class="accordion" id="${sourcesId}">
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button"
-                  data-bs-toggle="collapse" data-bs-target="#${collapseId}"
-                  aria-expanded="false" aria-controls="${collapseId}">
-                  📚 Show Retrieved Chunks (${data.sources.length})
-                </button>
-              </h2>
-              <div id="${collapseId}" class="accordion-collapse collapse">
-                <div class="accordion-body">
-        `;
-
-            data.sources.forEach((s) => {
-              sourcesHTML += `
-            <div class="border rounded p-2 mb-2">
-              <strong>${s.case_name || "Unknown Case"}</strong><br>
-              <small>${s.citation || ""}</small>
-              <p class="mt-1 text-secondary" style="font-size: 0.9em;">
-                ${s.snippet}
-              </p>
-            </div>`;
-            });
-
-            sourcesHTML += `
-                </div>
-              </div>
-            </div>
-          </div>`;
-
-            sourcesDiv.innerHTML = sourcesHTML;
-            botDiv.appendChild(sourcesDiv);
-          }
-
-          messagesDiv.appendChild(botDiv);
-        } catch (err) {
-          const errDiv = document.createElement("div");
-          errDiv.classList.add("message");
-          errDiv.innerHTML =
-            '<div class="bot-bubble text-danger">⚠️ Error fetching response.</div>';
-          messagesDiv.appendChild(errDiv);
-        } finally {
-          loading.style.display = "none";
-          messagesDiv.scrollTop = messagesDiv.scrollHeight;
-        }
-      }
-
-      // --- Enter key support ---
-      queryInput.addEventListener("keypress", (e) => {
-        if (e.key === "Enter" && !e.shiftKey) {
-          e.preventDefault();
-          sendMessage();
-        }
-      });
-    </script>
-    <!-- ✅ Bootstrap JS (required for collapse / accordion to work) -->
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>

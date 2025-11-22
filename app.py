@@ -74,19 +74,23 @@ def index():
     return render_template("index.html")
 
 @app.route("/ask", methods=["POST"])
+@app.route("/ask", methods=["POST"])
 def ask():
     data = request.get_json()
-    user_query = data.get("query", "")
+    user_query = data.get("query", "").strip()
+
+    if not user_query:
+        return jsonify({"answer": "Please enter a question.", "sources": []})
 
     # --- Multi-query expansion ---
     expanded_docs = multi_retriever.get_relevant_documents(user_query)
 
-    # --- Hybrid retrieval (optional if you added before) ---
-    # docs = hybrid_retrieval(query=user_query, retriever=retriever, keyword_docs=expanded_docs)
-    # If hybrid not used, just use expanded_docs:
+    # --- If vector retrieval fails, use keyword fallback on all chunks ---
     docs = expanded_docs
+    if not docs:
+        docs = keyword_fallback(user_query, chunked_docs)
 
-    # --- Build context for model ---
+    # --- Build context for model (may still be empty) ---
     context = "\n\n".join([
         f"Source: {d.metadata.get('case_name')} ({d.metadata.get('neutral_citation')})\n{d.page_content[:600]}..."
         for d in docs
@@ -95,61 +99,84 @@ def ask():
     prompt = f"""
     You are a South African legal research assistant.
 
-    Before answering, you MUST first determine whether the user's question is:
-    1. A legal question, AND
-    2. Specifically related to South African law, AND
-    3. Answerable using the provided SAFLII case-law context.
+    First, decide whether the user's question is:
+    (A) a South African legal question (doctrinal, case-law or practical), or
 
-    If the question is NOT legal, NOT related to South African law, or the context does NOT contain relevant legal material, you must politely refuse by saying:
+    
+    If it is (A), you may answer even if the context is limited, but:
+    - Prefer to base your answer on the SAFLII context below where relevant.
+    - If the context does not clearly cover the issue, you may still answer using general
+      South African legal principles, and you should say that no specific SAFLII cases
+      could be identified from the provided context.
 
-    "I'm only able to assist with South African legal questions based on SAFLII case law."
+    The Context section below contains the available cases and their neutral citations.
+    You MUST obey the following when writing your answer:
 
-    Do NOT attempt to answer non-legal, scientific, medical, technical, or general-knowledge questions.
-
-    Only proceed if the question is legal AND contextually linked to SAFLII.
+    1. Always answer in South African legal style, citing case law where relevant.
+    2. Write a single, coherent narrative answer in professional South African legal style.
+       Do NOT use headings, bullet lists or numbered lists.
+    3. Whenever you state a specific legal rule, test, or conclusion that is grounded
+       in a case, explicitly weave the case into the sentence, e.g.:
+       "According to Atamelang Bus Transport (Pty) Ltd v MEC for Community Safety
+       [2025] ZANWHC 191, the court held that ..."
+       or
+       "Similarly, in NUM obo Employees v CCMA [2011] ZALAC 7 the Labour Appeal Court confirmed that ..."
+    4. Only mention case names and citations that appear in the Context metadata
+       (the 'Source: ... (citation)' lines). Do NOT invent new cases or citations.
+       If you cannot confidently tie a point to a specific case from the context,
+       speak generally (e.g. "South African courts have held that ...") without naming a case.
+    5. Do NOT add a separate "Sources" or "References" section; just integrate cases
+       naturally into the narrative.
 
     ---
-
     Context:
     {context}
 
     Question:
     {user_query}
-
-    If the question is valid and relevant, summarize the retrieved SAFLII cases in a structured, professional legal style.
-
-    For each case, include:
-    - **Case Name** (with neutral citation)
-    - **Court and Date**
-    - **Concise Summary** integrating the legal issue, holding, reasoning, and outcome.
-
-    Write the answer in a continuous narrative in clean Markdown using bold labels
-    (e.g., **Case:**, **Court and Date:**, **Summary:**).
-    Avoid headings, bullet points, or numbered lists.
     """
 
     response = llm.invoke(prompt)
     answer = response.content if hasattr(response, "content") else str(response)
 
-    # If the model refused OR no docs were retrieved → no sources
-    irrelevant = (
-        "I'm only able to assist with South African legal questions" in answer
-        or not docs
-    )
+    # If the model refused → no sources
+    refusal_line = "I'm only able to assist with South African legal questions based on SAFLII case law."
+    if refusal_line in answer:
+        return jsonify({"answer": refusal_line, "sources": []})
 
-    if irrelevant:
+    # If we truly have no docs even after fallback → answer but say no sources
+    if not docs:
+        answer += "\n\n_No specific SAFLII case excerpts could be retrieved for this query._"
         return jsonify({"answer": answer, "sources": []})
 
-    # Otherwise attach the retrieved chunks
+    # Otherwise attach the retrieved chunks as sources for the side drawer
     sources = []
     for d in docs:
         sources.append({
             "case_name": d.metadata.get("case_name"),
             "citation": d.metadata.get("neutral_citation"),
-            "snippet": d.page_content[:400] + "..."
+            # treat this as a "summary" or preview in the drawer
+            "summary": d.page_content[:400] + "..."
         })
 
     return jsonify({"answer": answer, "sources": sources})
+
+def keyword_fallback(query, documents, limit=5):
+    """
+    Very simple keyword-based fallback if vector retrieval returns nothing.
+    Looks for overlaps between query words and document text.
+    """
+    keywords = [w.lower() for w in query.split() if len(w) > 3]
+    matches = []
+
+    for d in documents:
+        text = d.page_content.lower()
+        score = sum(1 for k in keywords if k in text)
+        if score > 0:
+            matches.append((score, d))
+
+    matches.sort(key=lambda x: x[0], reverse=True)
+    return [d for _, d in matches[:limit]]
 
 
 if __name__ == "__main__":
