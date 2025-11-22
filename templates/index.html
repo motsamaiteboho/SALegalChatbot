@@ -10,7 +10,10 @@
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/superhero/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
     <!-- Custom CSS -->
     <link
       rel="stylesheet"
@@ -23,110 +26,149 @@
   <body class="bg-light d-flex flex-column min-vh-100">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-dark shadow-sm" data-bs-theme="dark">
-  <div class="container-fluid">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="navbar-brand fw-semibold align-items-center gap-2" href="#">
+          <img
+            src="{{ url_for('static', filename='images/brand_icon.png') }}"
+            alt="Legal Assistant Icon"
+            height="26"
+            style="margin-top: -2px"
+            class="bg-primary"
+          />
+          <span class="d-sm-none">Legal Assistant</span>
+          <span class="d-none d-sm-inline">Legal Case-Law Assistant</span>
+        </a>
 
-    <!-- Brand -->
-    <a class="navbar-brand fw-semibold align-items-center gap-2" href="#">
-      <img src="{{ url_for('static', filename='images/brand_icon.png') }}"
-           alt="Legal Assistant Icon"
-           height="26"
-           style="margin-top: -2px;"
-           class="bg-primary">
-      Legal Case-Law Assistant
-    </a>
-
-    <!-- Toggler (hamburger) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Collapsible Content -->
-    <div class="collapse navbar-collapse" id="navMenu">
-      
-      <!-- Push items to right -->
-      <div class="ms-auto d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0">
-
+        <!-- Toggler (hamburger) -->
         <button
-          id="newConversationBtn"
-          class="btn btn-secondary btn-sm"
+          class="navbar-toggler"
           type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navMenu"
         >
-          New conversation
+          <span class="navbar-toggler-icon"></span>
         </button>
 
-        <button
-          class="btn btn-secondary"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#historyDrawer"
-        >
-          📘 History
-        </button>
+        <!-- Collapsible Content -->
+        <div class="collapse navbar-collapse" id="navMenu">
+          <!-- Push items to right -->
+          <div
+            class="ms-auto d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0"
+          >
+            <button
+              id="newConversationBtn"
+              class="btn btn-secondary btn-sm"
+              type="button"
+            >
+              New conversation
+            </button>
 
-        <button
-          class="btn btn-secondary"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#sourcesDrawer"
-        >
-          📚 Sources
-        </button>
+            <button
+              class="btn btn-secondary"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#historyDrawer"
+            >
+              📘 History
+            </button>
 
+            <button
+              class="btn btn-secondary"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sourcesDrawer"
+            >
+              📚 Sources
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-
-  </div>
-</nav>
-
+    </nav>
 
     <!-- Main content -->
     <main class="flex-grow-1 py-3 bg-white text-dark">
       <div id="chatbox" class="container-xxl">
         <div class="chat-header text-center mb-3">
-            <p class="text-secondary-emphasis mb-0 bg-light bg-opacity-10 border border-info border rounded-end">
-              This assistant focuses on the <strong>Law of Delict</strong> and
-              provides responses strictly grounded in
-              <strong>SAFLII case law</strong>, including principles of
-              defamation, negligence, wrongfulness and causation.
-            </p>
+          <p
+            class="text-secondary-emphasis mb-0 bg-light bg-opacity-10 border border-info border rounded-end"
+          >
+            This assistant focuses on the <strong>Law of Delict</strong> and
+            provides responses strictly grounded in
+            <strong>SAFLII case law</strong>, including principles of
+            defamation, negligence, wrongfulness and causation.
+          </p>
         </div>
         <div class="chat-card shadow-sm">
           <div class="content h-100 d-flex flex-column">
             <!-- Messages -->
             <div id="messages" class="chat-messages position-relative">
               <!-- Empty state -->
-              <div id="emptyState" class="d-flex flex-column align-items-center">
+              <div
+                id="emptyState"
+                class="d-flex flex-column align-items-center chat-empty"
+              >
                 <h5 class="mb-2">
                   Welcome to South African Case-Law Assistant
                 </h5>
                 <p class="text-secondary-emphasis mb-0">
                   Ask questions on South African law of delict
                 </p>
+                <div class="d-flex align-items-start gap-2 pt-4">
+                  <button
+                    type="button"
+                    class="btn btn-sm text-dark example-question"
+                  >
+                    When is a statement defamatory in South African law?
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm text-dark example-question"
+                  >
+                    What must a plaintiff prove to succeed in delict?
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-sm text-dark example-question"
+                  >
+                    How do courts determine wrongfulness in negligence?
+                  </button>
+                </div>
               </div>
             </div>
 
             <!-- Thinking indicator -->
-            <div id="loading" class="chat-loading text-dark" style="display: none">
+            <div
+              id="loading"
+              class="chat-loading text-dark"
+              style="display: none"
+            >
               <div class="spinner-border spinner-border-sm me-2"></div>
               <em>Thinking…</em>
             </div>
 
             <!-- Input area -->
-             <div class="chat-input border p-2">
-                <div class="d-flex gap-2">
-                  <textarea
-                    id="query"
-                    class="form-control"
-                    placeholder="Ask a South African legal question..."
-                    rows="1"
-                    style="resize:none;"
-                  ></textarea>
+            <div class="chat-input border p-2">
+              <form id="chatForm" class="d-flex gap-2">
+                <textarea
+                  id="query"
+                  class="form-control"
+                  placeholder="Ask a question about South African law of delict (defamation, negligence, wrongfulness, causation)…"
+                  rows="1"
+                  style="resize: none"
+                ></textarea>
 
-                  <button class="btn btn-secondary d-flex align-items-center justify-content-center"
-                    style="width: 42px; height: 42px;"
-                    onclick="sendMessage()">
-                    <i class="bi bi-send-fill"></i>
-                  </button>
-              </div>
+                <button
+                  id="sendBtn"
+                  type="submit"
+                  class="btn btn-secondary d-flex align-items-center justify-content-center"
+                  style="width: 42px; height: 42px"
+                  aria-label="Send message"
+                >
+                  <i class="bi bi-send-fill"></i>
+                </button>
+              </form>
+            </div>
           </div>
+          <!-- This closing div was missing -->
         </div>
       </div>
     </main>
@@ -193,7 +235,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-     <!-- JS -->
+    <!-- JS -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>

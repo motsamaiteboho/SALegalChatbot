@@ -1,136 +1,173 @@
-  html,
-      body {
-        height: 100%;
-        color: black;
-        overflow: hidden; /* Prevent entire page scrolling */
-      }
+html,
+body {
+  height: 100%;
+  color: black;
+  overflow: hidden; /* Prevent entire page scrolling */
+}
 
-      /* Card layout */
-      .chat-card {
-        display: flex;
-        flex-direction: column;
-        height: calc(100vh - 200px); /* Fixed height for the card */
-        padding: 20px;
-      }
+/* Card layout */
+.chat-card {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px); /* Fixed height for the card */
+  padding: 20px;
+}
 
-      .chat-header {
-        margin-bottom: 0.75rem;
-      }
+.example-question {
+  white-space: normal; /* allow wrapping */
+  text-align: left; /* optional */
+}
 
-      /* Messages area - now scrollable independently */
-      .chat-messages {
-        flex: 1; /* Take remaining space in the card */
-        overflow-y: auto; /* Enable scrolling only for messages */
-        padding: 0.75rem 0.25rem 0.75rem 0;
-        display: flex;
-        flex-direction: column;
-      }
+.chat-header {
+  margin-bottom: 0.75rem;
+}
 
-      /* Center empty state within messages area */
-      .chat-empty {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
+/* Messages area - now scrollable independently */
+.chat-messages {
+  flex: 1; /* Take remaining space in the card */
+  overflow-y: auto; /* Enable scrolling only for messages */
+  padding: 0.75rem 0.25rem 0.75rem 0;
+  display: flex;
+  flex-direction: column;
+}
 
-      /* Message bubbles */
-      .message {
-        margin-bottom: 0.75rem;
-      }
+/* Center empty state within messages area */
+.chat-empty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-      .bubble {
-        display: inline-block;
-        padding: 0.6rem 0.9rem;
-        border-radius: 14px;
-        max-width: 80%;
-        white-space: pre-wrap;
-        font-size: 0.95rem;
-      }
+/* Message bubbles */
+.message {
+  margin-bottom: 0.75rem;
+}
 
-      .user-msg {
-        text-align: right;
-      }
+.bubble {
+  display: inline-block;
+  padding: 0.6rem 0.9rem;
+  border-radius: 14px;
+  max-width: 80%;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+}
 
-      .user-bubble {
-        background-color: #0d6efd;
-        color: #ffffff;
-      }
+.user-msg {
+  text-align: right;
+}
 
-      .bot-msg {
-        text-align: left;
-      }
+.user-bubble {
+  background-color: #0d6efd;
+  color: #ffffff;
+}
 
-      .bot-bubble {
-        background-color: #f3f4f6;
-        color: #212529;
-      }
+.bot-msg {
+  text-align: left;
+}
 
-      /* Loading row */
-      .chat-loading {
-        display: none;
-        padding: 0.5rem 0;
-        font-size: 0.9rem;
-        text-align: left;
-      }
+.bot-bubble {
+  background-color: #f3f4f6;
+  color: #212529;
+}
 
-      /* Input area fixed at bottom of card */
-      .chat-input {
-        margin-top: 0.25rem;
-        padding-top: 0.5rem;
-      }
+/* Loading row */
+.chat-loading {
+  display: none;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  text-align: left;
+}
 
-      /* Drawer scroll areas */
-      .drawer-scroll {
-        max-height: calc(100vh - 120px);
-        overflow-y: auto;
-      }
+/* Input area fixed at bottom of card */
+.chat-input {
+  margin-top: 0.25rem;
+  padding-top: 0.5rem;
+}
 
-      /* Footer */
-      footer span {
-        line-height: 1.4;
-      }
+/* Drawer scroll areas */
+.drawer-scroll {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
 
+/* Footer */
+footer span {
+  line-height: 1.4;
+}
 
-      /* Small screen adjustments */
+/* Source modal styling */
+.source-modal {
+  border-radius: 0.75rem;
+}
+
+#sourceModal .modal-content {
+  /* Superhero theme is dark; keep it consistent */
+  background-color: #1b2a41;
+}
+
+#sourceModal .modal-header {
+  background: transparent;
+}
+
+#sourceModal .modal-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.source-modal-meta {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.source-modal-body {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+/* Make buttons wrap nicely on small screens */
+#sourceModal #sourceModalLinks .btn {
+  min-width: 120px;
+}
+
+/* Small screen adjustments */
 @media (max-width: 768px) {
   /* Navbar brand adjustments */
   .navbar-brand {
     font-size: 0.9rem;
   }
-  
+
   .navbar-brand img {
-    height: 20px !important; /* Reduce icon size */
+    height: 22px !important; /* Reduce icon size */
   }
-  
+
   /* Button spacing */
   .navbar .d-flex.gap-2 {
     gap: 0.25rem !important;
   }
-  
+
   /* Header text adjustments */
   .chat-header p {
     font-size: 0.85rem;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
   }
-  
+
   /* Chat card height adjustment */
   .chat-card {
     height: calc(100vh - 180px);
     padding: 10px;
   }
-  
+
   /* Message bubbles full width on mobile */
   .bubble {
     max-width: 90%;
   }
-  
+
   /* Footer text adjustments */
   footer .container-xxl {
     text-align: center;
   }
-  
+
   footer .text-muted {
     font-size: 0.75rem;
   }
@@ -141,16 +178,16 @@
   .navbar-brand span {
     display: none; /* Hide text, show only icon on very small screens */
   }
-  
+
   .chat-header p {
     font-size: 0.8rem;
   }
-  
+
   .bubble {
     max-width: 95%;
     font-size: 0.9rem;
   }
-  
+
   /* Adjust button text if needed */
   .btn-secondary {
     font-size: 0.8rem;
