@@ -18,53 +18,28 @@ if key:
     key = key.strip()
     os.environ["OPENAI_API_KEY"] = key
 # ====================================
-# 1. Load documents once on startup
+# Load FAISS index (FAST, NO chunking)
 # ====================================
-with open("metadata/case_metadata_core_with_paths.json", "r", encoding="utf-8") as f:
-    cases_metadata = json.load(f)
-
-docs = []
-for case in cases_metadata:
-    raw_path = case.get("cleaned_text_path")
-    if not raw_path:
-        continue
-
-    # 1) Normalise Windows-style backslashes to POSIX-style
-    normalized_path = raw_path.replace("\\", "/")
-
-    # 2) Build a Path relative to the app root
-    text_path = Path(normalized_path)
-
-    try:
-        # 3) Skip if the file doesn't actually exist on the slug
-        if not text_path.is_file():
-            continue
-
-        text = text_path.read_text(encoding="utf-8")
-        docs.append(Document(page_content=text, metadata=case))
-
-    except OSError:
-        # Handles cases like "filename too long" or invalid paths on Linux
-        # Just skip those problematic entries
-        continue
-
-print(f"✅ Loaded {len(docs)} documents and {len(docs)} raw texts.")
-
-
-splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
-chunked_docs = [Document(page_content=chunk, metadata=d.metadata)
-                for d in docs for chunk in splitter.split_text(d.page_content)]
-
-print(f"✅ Loaded {len(docs)} documents and {len(chunked_docs)} chunks.")
-
 embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
-vectorstore = FAISS.from_documents(chunked_docs, embeddings)
+
+vectorstore = FAISS.load_local(
+    "faiss_index",
+    embeddings,
+    allow_dangerous_deserialization=True
+)
+
 retriever = vectorstore.as_retriever(search_kwargs={"k": 5})
 
+# LLM for multi-query
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
-# Multi-query retriever (for better coverage)
-multi_retriever = MultiQueryRetriever.from_llm(retriever=retriever, llm=llm)
+# Multi-query wrapper (optional)
+multi_retriever = MultiQueryRetriever.from_llm(
+    retriever=retriever,
+    llm=llm
+)
+
+print("✅ Loaded FAISS index and retriever successfully!")
 
 # ====================================
 # Flask route for chat
@@ -74,27 +49,42 @@ def index():
     return render_template("index.html")
 
 @app.route("/ask", methods=["POST"])
-@app.route("/ask", methods=["POST"])
 def ask():
-    data = request.get_json()
+    data = request.get_json() or {}
     user_query = data.get("query", "").strip()
 
     if not user_query:
         return jsonify({"answer": "Please enter a question.", "sources": []})
 
-    # --- Multi-query expansion ---
-    expanded_docs = multi_retriever.get_relevant_documents(user_query)
+    # --- 1) Multi-query expansion over local FAISS index ---
+    docs = multi_retriever.get_relevant_documents(user_query)
 
-    # --- If vector retrieval fails, use keyword fallback on all chunks ---
-    docs = expanded_docs
+    # --- 2) Simple fallback: plain retriever with bigger k (no chunked_docs any more) ---
     if not docs:
-        docs = keyword_fallback(user_query, chunked_docs)
+        # Try again with standard retriever & a larger top-k
+        docs = retriever.get_relevant_documents(user_query)
 
-    # --- Build context for model (may still be empty) ---
-    context = "\n\n".join([
-        f"Source: {d.metadata.get('case_name')} ({d.metadata.get('neutral_citation')})\n{d.page_content[:600]}..."
-        for d in docs
-    ])
+    # --- 3) Build context for model (may still be empty) ---
+    # Include court, date and SAFLII URL in the "Source:" line so the model sees them.
+    context_parts = []
+    for d in docs:
+        m = d.metadata or {}
+        case_name = m.get("case_name") or "Unknown case"
+        citation = m.get("neutral_citation") or ""
+        court = m.get("court") or ""
+        jd = m.get("judgment_date") or ""
+        saflii_url = m.get("saflii_case_url") or m.get("saflii_url") or ""
+
+        header = f"Source: {case_name} ({citation})"
+        if court or jd:
+            header += f" – {court} {jd}".strip()
+        if saflii_url:
+            header += f"\nSAFLII: {saflii_url}"
+
+        snippet = d.page_content[:800] + "..."
+        context_parts.append(f"{header}\n{snippet}")
+
+    context = "\n\n".join(context_parts)
 
     prompt = f"""
     You are a South African legal research assistant.
@@ -139,7 +129,6 @@ def ask():
     response = llm.invoke(prompt)
     answer = response.content if hasattr(response, "content") else str(response)
 
-    # If the model refused → no sources
     refusal_line = "I'm only able to assist with South African legal questions based on SAFLII case law."
     if refusal_line in answer:
         return jsonify({"answer": refusal_line, "sources": []})
@@ -149,34 +138,29 @@ def ask():
         answer += "\n\n_No specific SAFLII case excerpts could be retrieved for this query._"
         return jsonify({"answer": answer, "sources": []})
 
-    # Otherwise attach the retrieved chunks as sources for the side drawer
+    # --- 4) Build sources payload for the side drawer (dedup per case) ---
     sources = []
+    seen_keys = set()
+
     for d in docs:
+        m = d.metadata or {}
+        key = (m.get("case_name"), m.get("neutral_citation"))
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
+
         sources.append({
-            "case_name": d.metadata.get("case_name"),
-            "citation": d.metadata.get("neutral_citation"),
-            # treat this as a "summary" or preview in the drawer
+            "case_name": m.get("case_name"),
+            "citation": m.get("neutral_citation"),
+            "court": m.get("court"),
+            "judgment_date": m.get("judgment_date"),
+            "saflii_url": m.get("saflii_case_url") or m.get("saflii_url"),
+            "pdf_url": m.get("pdf_url"),
+            # short preview of the chunk
             "summary": d.page_content[:400] + "..."
         })
 
     return jsonify({"answer": answer, "sources": sources})
-
-def keyword_fallback(query, documents, limit=5):
-    """
-    Very simple keyword-based fallback if vector retrieval returns nothing.
-    Looks for overlaps between query words and document text.
-    """
-    keywords = [w.lower() for w in query.split() if len(w) > 3]
-    matches = []
-
-    for d in documents:
-        text = d.page_content.lower()
-        score = sum(1 for k in keywords if k in text)
-        if score > 0:
-            matches.append((score, d))
-
-    matches.sort(key=lambda x: x[0], reverse=True)
-    return [d for _, d in matches[:limit]]
 
 
 if __name__ == "__main__":

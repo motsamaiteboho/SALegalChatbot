@@ -117,15 +117,29 @@ function renderSources(sources) {
   }
 
   sources.forEach((s) => {
+    const caseName = s.case_name || "Unknown Case";
+    const citation = s.citation || "";
+    const court = s.court ? `<span class="text-muted small">${s.court}</span>` : "";
+    const date = s.judgment_date ? `<span class="text-muted small"> • ${s.judgment_date}</span>` : "";
+    const safliiUrl = s.saflii_url ? `<a href="${s.saflii_url}" target="_blank" class="small">View on SAFLII</a>` : "";
+    const pdfUrl = s.pdf_url ? `<a href="${s.pdf_url}" target="_blank" class="small ms-3">Open PDF</a>` : "";
+
     const card = document.createElement("div");
     card.className = "card mb-2 shadow-sm border-0";
+
     card.innerHTML = `
       <div class="card-body p-3">
-        <strong>${s.case_name || "Unknown Case"}</strong><br>
-        <span class="text-muted small">${s.citation || ""}</span>
+        <strong>${caseName}</strong><br>
+        <span class="text-muted small">${citation}</span><br>
+        ${court}${date}
         <p class="small mt-2 text-body-secondary">${s.summary}</p>
+        <div class="mt-2">
+          ${safliiUrl}
+          ${pdfUrl}
+        </div>
       </div>
     `;
+
     sourcesList.appendChild(card);
   });
 }
