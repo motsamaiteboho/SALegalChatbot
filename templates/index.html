@@ -3,62 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>⚖️ SAFLII Legal Case-Law Assistant</title>
+    <title>⚖️Legal Case-Law Assistant</title>
 
     <!-- Bootswatch theme -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/superhero/bootstrap.min.css"
       rel="stylesheet"
     />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <!-- Custom CSS -->
     <link
       rel="stylesheet"
       href="{{ url_for('static', filename='css/styles.css') }}"
     />
-
     <!-- Markdown parser -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
 
   <body class="bg-light d-flex flex-column min-vh-100">
     <!-- Navbar -->
-    <nav class="navbar navbar navbar-expand-lg bg-dark" data-bs-theme="dark" shadow-sm">
-      <div class="container-fluid">
-        <span class="navbar-brand fw-semibold">
-          ⚖️ SAFLII Legal Case-Law Assistant
-        </span>
+    <nav class="navbar navbar-expand-lg bg-dark shadow-sm" data-bs-theme="dark">
+  <div class="container-fluid">
 
-        <div class="d-flex gap-2 ms-auto">
-          <button
-            id="newConversationBtn"
-            class="btn btn-secondary btn-sm"
-            type="button"
-          >
-            New conversation
-          </button>
+    <!-- Brand -->
+    <a class="navbar-brand fw-semibold align-items-center gap-2" href="#">
+      <img src="{{ url_for('static', filename='images/brand_icon.png') }}"
+           alt="Legal Assistant Icon"
+           height="26"
+           style="margin-top: -2px;"
+           class="bg-primary">
+      Legal Case-Law Assistant
+    </a>
 
-          <button
-            class="btn btn-secondary  me-2"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#historyDrawer"
-          >
-            📘 History
-          </button>
+    <!-- Toggler (hamburger) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-          <button
-            class="btn btn-secondary "
-            data-bs-toggle="offcanvas"
-            data-bs-target="#sourcesDrawer"
-          >
-            📚 Sources
-          </button>
-        </div>
+    <!-- Collapsible Content -->
+    <div class="collapse navbar-collapse" id="navMenu">
+      
+      <!-- Push items to right -->
+      <div class="ms-auto d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0">
+
+        <button
+          id="newConversationBtn"
+          class="btn btn-secondary btn-sm"
+          type="button"
+        >
+          New conversation
+        </button>
+
+        <button
+          class="btn btn-secondary"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#historyDrawer"
+        >
+          📘 History
+        </button>
+
+        <button
+          class="btn btn-secondary"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sourcesDrawer"
+        >
+          📚 Sources
+        </button>
+
       </div>
-    </nav>
+    </div>
+
+  </div>
+</nav>
+
 
     <!-- Main content -->
-    <main class="flex-grow-1 py-3 bg-white text-dark ">
+    <main class="flex-grow-1 py-3 bg-white text-dark">
       <div id="chatbox" class="container-xxl">
         <div class="chat-header text-center mb-3">
             <p class="text-secondary-emphasis mb-0 bg-light bg-opacity-10 border border-info border rounded-end">
@@ -67,9 +87,9 @@
               <strong>SAFLII case law</strong>, including principles of
               defamation, negligence, wrongfulness and causation.
             </p>
-          </div>
+        </div>
         <div class="chat-card shadow-sm">
-          <div class="content py-4">
+          <div class="content h-100 d-flex flex-column">
             <!-- Messages -->
             <div id="messages" class="chat-messages position-relative">
               <!-- Empty state -->
@@ -77,8 +97,8 @@
                 <h5 class="mb-2">
                   Welcome to South African Case-Law Assistant
                 </h5>
-                <p class="text-secondary-emphasismb-0">
-                  Ask questions on South African law of delict - all answers are grounded in SAFLII case law.
+                <p class="text-secondary-emphasis mb-0">
+                  Ask questions on South African law of delict
                 </p>
               </div>
             </div>
@@ -90,19 +110,22 @@
             </div>
 
             <!-- Input area -->
-            <div class="chat-input border">
-              <div class="input-group">
-                <textarea
-                  id="query"
-                  class="form-control"
-                  placeholder="Ask a South African legal question..."
-                  rows="2"
-                ></textarea>
-                <button class="btn btn-secondary" onclick="sendMessage()">
-                  Send
-                </button>
+             <div class="chat-input border p-2">
+                <div class="d-flex gap-2">
+                  <textarea
+                    id="query"
+                    class="form-control"
+                    placeholder="Ask a South African legal question..."
+                    rows="1"
+                    style="resize:none;"
+                  ></textarea>
+
+                  <button class="btn btn-secondary d-flex align-items-center justify-content-center"
+                    style="width: 42px; height: 42px;"
+                    onclick="sendMessage()">
+                    <i class="bi bi-send-fill"></i>
+                  </button>
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -113,7 +136,7 @@
       <div
         class="container-xxl d-flex flex-column flex-md-row justify-content-between gap-2"
       >
-        <span> © {{ 2025 }} My Legal Assistant. All rights reserved. </span>
+        <span> © 2025 My Legal Assistant. All rights reserved. </span>
         <span class="text-muted">
           This tool is for informational purposes only and does not constitute
           legal advice. It is limited to South African law and may contain
@@ -142,7 +165,7 @@
 
       <div class="offcanvas-body drawer-scroll">
         <div id="historyList" class="list-group list-group-flush small">
-          <div class="p-2 text-muted">No questions yet.</div>
+          <div class="p-2 text-secondary-emphasis">No questions yet.</div>
         </div>
       </div>
     </div>
@@ -155,7 +178,7 @@
       aria-labelledby="sourcesDrawerLabel"
     >
       <div class="offcanvas-header">
-        <h5 id="sourcesDrawerLabel">Sources & Summaries</h5>
+        <h5 id="sourcesDrawerLabel">Sources</h5>
         <button
           class="btn-close"
           type="button"
@@ -170,8 +193,7 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Your JS -->
+     <!-- JS -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>

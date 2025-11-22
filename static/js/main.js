@@ -30,9 +30,9 @@ function addEmptyState() {
   div.id = "emptyState";
   div.className = "chat-empty";
   div.innerHTML = `
-    <h5 class="mb-2">Welcome to My Legal Assistant</h5>
-    <p class="text-muted mb-0">
-      Start a new conversation by asking a South African legal question in the box below.
+    <h5 class="mb-2">Welcome to South African Case-Law Assistant</h5>
+    <p class="text-secondary-emphasis mb-0">
+      Ask questions on South African law of delict
     </p>
   `;
 
@@ -85,7 +85,7 @@ function renderHistory() {
   historyList.innerHTML = "";
 
   if (chatHistory.length === 0) {
-    historyList.innerHTML = `<div class="p-2 text-muted">No questions yet.</div>`;
+    historyList.innerHTML = `<div class="p-2 text-secondary-emphasis">No questions yet.</div>`;
     return;
   }
 
@@ -100,7 +100,7 @@ function renderHistory() {
 
     el.innerHTML = `
       <strong>Query #${index + 1}</strong>
-      <div class="text-muted">${snippet}</div>
+      <div class="text-secondary-emphasis">${snippet}</div>
     `;
 
     historyList.appendChild(el);
@@ -112,15 +112,15 @@ function renderSources(sources) {
   sourcesList.innerHTML = "";
 
   if (!sources || sources.length === 0) {
-    sourcesList.innerHTML = `<p class="text-muted">No sources returned.</p>`;
+    sourcesList.innerHTML = `<p class="text-secondary-emphasis">No sources returned.</p>`;
     return;
   }
 
   sources.forEach((s) => {
     const caseName = s.case_name || "Unknown Case";
     const citation = s.citation || "";
-    const court = s.court ? `<span class="text-muted small">${s.court}</span>` : "";
-    const date = s.judgment_date ? `<span class="text-muted small"> • ${s.judgment_date}</span>` : "";
+    const court = s.court ? `<span class="small">${s.court}</span>` : "";
+    const date = s.judgment_date ? `<span class="small"> • ${s.judgment_date}</span>` : "";
     const safliiUrl = s.saflii_url ? `<a href="${s.saflii_url}" target="_blank" class="small">View on SAFLII</a>` : "";
     const pdfUrl = s.pdf_url ? `<a href="${s.pdf_url}" target="_blank" class="small ms-3">Open PDF</a>` : "";
 
@@ -130,7 +130,7 @@ function renderSources(sources) {
     card.innerHTML = `
       <div class="card-body p-3">
         <strong>${caseName}</strong><br>
-        <span class="text-muted small">${citation}</span><br>
+        <span class="small">${citation}</span><br>
         ${court}${date}
         <p class="small mt-2 text-body-secondary">${s.summary}</p>
         <div class="mt-2">
