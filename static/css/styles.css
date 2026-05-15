@@ -85,10 +85,58 @@ body {
   padding-top: 0.5rem;
 }
 
+.chat-input .form-select {
+  min-width: 140px;
+  max-width: 180px;
+}
+
 /* Drawer scroll areas */
 .drawer-scroll {
   max-height: calc(100vh - 120px);
   overflow-y: auto;
+}
+
+/* Offcanvas drawer styling for better contrast */
+.offcanvas {
+  background-color: #111b2e;
+  color: #f8fafc;
+}
+
+.offcanvas.offcanvas-end {
+  width: 45rem;
+  max-width: 95%;
+}
+
+.offcanvas .offcanvas-header,
+.offcanvas .offcanvas-body,
+.offcanvas h5,
+.offcanvas h6,
+.offcanvas p,
+.offcanvas li,
+.offcanvas .card-body,
+.offcanvas .small,
+.offcanvas .list-group-item {
+  color: #f8fafc !important;
+}
+
+.rag-svg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0.75rem 0 1rem;
+}
+
+.offcanvas .text-secondary-emphasis {
+  color: rgba(248, 251, 252, 0.8) !important;
+}
+
+.offcanvas .card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.offcanvas .btn-close {
+  filter: invert(1);
 }
 
 /* Footer */

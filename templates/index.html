@@ -57,6 +57,14 @@
             class="ms-auto d-flex flex-column flex-lg-row gap-2 mt-3 mt-lg-0"
           >
             <button
+              id="modeToggleBtn"
+              type="button"
+              class="btn btn-outline-light btn-sm"
+            >
+              Mode: Case-Law
+            </button>
+
+            <button
               id="newConversationBtn"
               class="btn btn-secondary btn-sm"
               type="button"
@@ -68,6 +76,7 @@
               class="btn btn-secondary"
               data-bs-toggle="offcanvas"
               data-bs-target="#historyDrawer"
+              title="Open conversation history"
             >
               📘 History
             </button>
@@ -76,8 +85,28 @@
               class="btn btn-secondary"
               data-bs-toggle="offcanvas"
               data-bs-target="#sourcesDrawer"
+              title="View the documents used for the current answer"
             >
               📚 Sources
+            </button>
+
+            <button
+              id="vectorStoreBtn"
+              class="btn btn-secondary"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#vectorStoreDrawer"
+              title="Inspect what is stored in the FAISS vector store"
+            >
+              🧠 Vector Store
+            </button>
+
+            <button
+              class="btn btn-secondary"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#howItWorksDrawer"
+              title="Learn how the RAG workflow works"
+            >
+              ❔ How RAG works
             </button>
           </div>
         </div>
@@ -92,9 +121,12 @@
             class="text-secondary-emphasis mb-0 bg-light bg-opacity-10 border border-info border rounded-end"
           >
             This assistant focuses on the <strong>Law of Delict</strong> and
-            provides responses strictly grounded in
-            <strong>SAFLII case law</strong>, including principles of
-            defamation, negligence, wrongfulness and causation.
+            provides responses grounded in South African legal analysis.
+            <strong>Case-Law</strong> mode uses local retrieval of SAFLII cases,
+            while <strong>General</strong> mode uses broader legal reasoning.
+          </p>
+          <p class="text-secondary-emphasis mt-2 mb-0">
+            Current mode: <span id="modeLabel" class="fw-semibold">Case-Law</span>
           </p>
         </div>
         <div class="chat-card shadow-sm">
@@ -147,25 +179,36 @@
 
             <!-- Input area -->
             <div class="chat-input border p-2">
-              <form id="chatForm" class="d-flex gap-2">
+              <form id="chatForm" class="d-flex gap-2 flex-column flex-sm-row align-items-end">
                 <textarea
                   id="query"
-                  class="form-control"
+                  class="form-control flex-grow-1"
                   placeholder="Ask a question about South African law of delict (defamation, negligence, wrongfulness, causation)…"
                   rows="1"
                   style="resize: none"
                 ></textarea>
 
-                <button
-                  id="sendBtn"
-                  type="submit"
-                  class="btn btn-secondary d-flex align-items-center justify-content-center"
-                  style="width: 42px; height: 42px"
-                  aria-label="Send message"
-                >
-                  <i class="bi bi-send-fill"></i>
-                </button>
+                <div class="d-flex gap-2 align-items-center flex-shrink-0">
+                  <select id="promptTypeSelect" class="form-select form-select-sm" aria-label="Prompt type">
+                    <option value="fewshot" selected>Few-shot</option>
+                    <option value="zeroshot">Zero-shot</option>
+                    <option value="citation">Citation-aware</option>
+                    <option value="concise">Concise</option>
+                  </select>
+                  <button
+                    id="sendBtn"
+                    type="submit"
+                    class="btn btn-secondary d-flex align-items-center justify-content-center"
+                    style="width: 42px; height: 42px"
+                    aria-label="Send message"
+                  >
+                    <i class="bi bi-send-fill"></i>
+                  </button>
+                </div>
               </form>
+              <div class="form-text text-muted small mt-1">
+                Try Few-shot, Zero-shot, or Citation-aware to compare response style and source citation behavior.
+              </div>
             </div>
           </div>
           <!-- This closing div was missing -->
@@ -206,6 +249,11 @@
       </div>
 
       <div class="offcanvas-body drawer-scroll">
+        <div class="mb-3">
+          <small class="text-muted">
+            <strong>Tip:</strong> Click any question to load it and view responses. Switch modes (Case-Law/General) to see different answers for the same question.
+          </small>
+        </div>
         <div id="historyList" class="list-group list-group-flush small">
           <div class="p-2 text-secondary-emphasis">No questions yet.</div>
         </div>
@@ -230,6 +278,150 @@
 
       <div class="offcanvas-body drawer-scroll">
         <div id="sourcesList" class="small text-muted">No sources yet.</div>
+      </div>
+    </div>
+
+    <!-- � HOW IT WORKS DRAWER -->
+    <div
+      class="offcanvas offcanvas-end"
+      id="howItWorksDrawer"
+      tabindex="-1"
+      aria-labelledby="howItWorksDrawerLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 id="howItWorksDrawerLabel">How RAG Works</h5>
+        <button
+          class="btn-close"
+          type="button"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body drawer-scroll">
+        <div class="mb-3">
+          <h6>RAG explained</h6>
+          <p class="small text-secondary-emphasis">
+            Retrieval-Augmented Generation (RAG) combines local document retrieval
+            with a language model answer.
+          </p>
+        </div>
+
+        <div class="mb-3">
+          <h6>Step 1: Embed the question</h6>
+          <p class="small text-secondary-emphasis">
+            The question is converted into a numeric embedding that captures meaning.
+          </p>
+        </div>
+
+        <div class="mb-3">
+          <h6>Step 2: Search the vector store</h6>
+          <p class="small text-secondary-emphasis">
+            The embedding is used to find similar judgment fragments in the FAISS vector store.
+          </p>
+        </div>
+
+        <div class="mb-3">
+          <h6>Step 3: Build the context</h6>
+          <p class="small text-secondary-emphasis">
+            Retrieved case excerpts and metadata are assembled into a context prompt.
+          </p>
+        </div>
+
+        <div class="mb-3">
+          <h6>Step 4: Generate the answer</h6>
+          <p class="small text-secondary-emphasis">
+            The model writes a South African legal answer grounded in the retrieved cases.
+          </p>
+        </div>
+
+        <div class="mb-3">
+          <h6>Mode comparison</h6>
+          <p class="small text-secondary-emphasis">
+            <strong>Case-Law</strong> mode uses retrieved SAFLII context.
+            <strong>General</strong> mode uses broader LLM reasoning without local retrieval.
+          </p>
+        </div>
+
+        <div>
+          <h6>Glossary</h6>
+          <ul class="small text-secondary-emphasis ps-3">
+            <li><strong>Embeddings</strong>: numeric vectors representing text meaning.</li>
+            <li><strong>Vector store</strong>: a searchable database of embeddings.</li>
+            <li><strong>Retriever</strong>: finds the most relevant documents by similarity.</li>
+            <li><strong>Context</strong>: retrieved text used to ground the answer.</li>
+            <li><strong>RAG</strong>: retrieval-augmented generation.</li>
+          </ul>
+        </div>
+
+        <div class="mb-3">
+          <h6>Figure 4.7: RAG pipeline overview</h6>
+          <svg class="rag-svg" viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">
+            <!-- User Query Box -->
+            <rect x="10" y="30" width="120" height="120" rx="8" fill="rgba(100, 150, 255, 0.3)" stroke="rgba(100, 150, 255, 0.8)" stroke-width="2"/>
+            <text x="70" y="65" font-size="14" font-weight="bold" fill="#f8fafc" text-anchor="middle">User Query</text>
+            <text x="70" y="90" font-size="11" fill="rgba(248, 251, 252, 0.7)" text-anchor="middle">Query Embedding</text>
+            <text x="70" y="105" font-size="11" fill="rgba(248, 251, 252, 0.7)" text-anchor="middle">User Input</text>
+
+            <!-- Arrow 1 -->
+            <path d="M 130 90 L 155 90" stroke="rgba(248, 251, 252, 0.7)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+            <!-- Retrieval Box -->
+            <rect x="155" y="30" width="120" height="120" rx="8" fill="rgba(100, 200, 150, 0.3)" stroke="rgba(100, 200, 150, 0.8)" stroke-width="2"/>
+            <text x="215" y="65" font-size="14" font-weight="bold" fill="#f8fafc" text-anchor="middle">Retrieval</text>
+            <text x="215" y="90" font-size="11" fill="rgba(248, 251, 252, 0.7)" text-anchor="middle">Vector Search</text>
+            <text x="215" y="105" font-size="11" fill="rgba(248, 251, 252, 0.7)" text-anchor="middle">Top-K Chunks</text>
+
+            <!-- Arrow 2 -->
+            <path d="M 275 90 L 300 90" stroke="rgba(248, 251, 252, 0.7)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+            <!-- Response Generation Box -->
+            <rect x="300" y="30" width="130" height="120" rx="8" fill="rgba(255, 150, 100, 0.3)" stroke="rgba(255, 150, 100, 0.8)" stroke-width="2"/>
+            <text x="365" y="65" font-size="14" font-weight="bold" fill="#f8fafc" text-anchor="middle">Response Gen.</text>
+            <text x="365" y="90" font-size="11" fill="rgba(248, 251, 252, 0.7)" text-anchor="middle">LLM + Context</text>
+            <text x="365" y="105" font-size="11" fill="rgba(248, 251, 252, 0.7)" text-anchor="middle">Contextual Prompt</text>
+
+            <!-- Arrow 3 -->
+            <path d="M 430 90 L 455 90" stroke="rgba(248, 251, 252, 0.7)" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+            <!-- Final Answer Box -->
+            <rect x="455" y="30" width="120" height="120" rx="8" fill="rgba(200, 150, 255, 0.3)" stroke="rgba(200, 150, 255, 0.8)" stroke-width="2"/>
+            <text x="515" y="65" font-size="14" font-weight="bold" fill="#f8fafc" text-anchor="middle">Final Answer</text>
+            <text x="515" y="90" font-size="11" fill="rgba(248, 251, 252, 0.7)" text-anchor="middle">Grounded</text>
+            <text x="515" y="105" font-size="11" fill="rgba(248, 251, 252, 0.7)" text-anchor="middle">Response</text>
+
+            <!-- Arrow marker definition -->
+            <defs>
+              <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                <polygon points="0 0, 10 3, 0 6" fill="rgba(248, 251, 252, 0.7)" />
+              </marker>
+            </defs>
+          </svg>
+          <p class="small text-secondary-emphasis mb-0">
+            This illustration shows the end-to-end RAG process: user input is embedded, matched against the vector store, combined with retrieved context, and passed to the LLM to produce a grounded answer.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- �🟣 VECTOR STORE DRAWER -->
+    <div
+      class="offcanvas offcanvas-end"
+      id="vectorStoreDrawer"
+      tabindex="-1"
+      aria-labelledby="vectorStoreDrawerLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 id="vectorStoreDrawerLabel">Vector Store Preview</h5>
+        <button
+          class="btn-close"
+          type="button"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body drawer-scroll">
+        <div id="vectorStoreList" class="small text-muted">
+          Loading vector store preview...
+        </div>
       </div>
     </div>
 

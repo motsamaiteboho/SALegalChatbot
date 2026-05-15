@@ -6,18 +6,51 @@ const loading = document.getElementById("loading");
 const queryInput = document.getElementById("query");
 const historyList = document.getElementById("historyList");
 const sourcesList = document.getElementById("sourcesList");
+const vectorStoreList = document.getElementById("vectorStoreList");
+const vectorStoreBtn = document.getElementById("vectorStoreBtn");
 const newConversationBtn = document.getElementById("newConversationBtn");
 const chatForm = document.getElementById("chatForm");
 const sendBtn = document.getElementById("sendBtn");
 const chatContent = document.querySelector(".content");
 
 let emptyState = document.getElementById("emptyState");
+let activeHistoryIndex = null;
 
 // =======================
 // STATE
 // =======================
 const chatHistory = [];
 let isThinking = false;
+let mode = "case_law";
+let vectorStoreLoaded = false;
+const modeLabel = document.getElementById("modeLabel");
+const modeToggleBtn = document.getElementById("modeToggleBtn");
+const promptTypeSelect = document.getElementById("promptTypeSelect");
+let promptType = "fewshot";
+
+if (promptTypeSelect) {
+  promptTypeSelect.addEventListener("change", () => {
+    promptType = promptTypeSelect.value || "fewshot";
+  });
+}
+
+function setMode(selectedMode) {
+  mode = selectedMode;
+  if (modeLabel) {
+    modeLabel.textContent = mode === "general" ? "General" : "Case-Law";
+  }
+
+  if (modeToggleBtn) {
+    modeToggleBtn.textContent = mode === "general" ? "Mode: General" : "Mode: Case-Law";
+  }
+
+  // Clear active history when switching modes for a clean screen
+  activeHistoryIndex = null;
+  addEmptyState();
+  renderHistory();
+}
+
+setMode("case_law");
 
 // Modal handles
 let sourceModalInstance = null;
@@ -25,6 +58,10 @@ let sourceModalTitle = null;
 let sourceModalMeta = null;
 let sourceModalBody = null;
 let sourceModalLinks = null;
+let debugModalInstance = null;
+let debugModalTitle = null;
+let debugModalPrompt = null;
+let debugModalDetails = null;
 
 // =======================
 // UI HELPERS
@@ -211,6 +248,86 @@ function openSourceModal(source) {
   sourceModalInstance.show();
 }
 
+function initDebugModal() {
+  let modalEl = document.getElementById("debugModal");
+
+  if (!modalEl) {
+    modalEl = document.createElement("div");
+    modalEl.id = "debugModal";
+    modalEl.className = "modal fade";
+    modalEl.tabIndex = -1;
+    modalEl.setAttribute("aria-hidden", "true");
+    modalEl.innerHTML = `
+      <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content source-modal">
+          <div class="modal-header border-0 pb-2">
+            <div class="text-white">
+              <h5 class="modal-title mb-1" id="debugModalTitle">Prompt & Context</h5>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+
+          <div class="modal-body bg-white text-dark pt-0">
+            <div class="mb-3">
+              <h6>Prompt</h6>
+              <pre id="debugModalPrompt" class="small bg-light p-2 rounded"></pre>
+            </div>
+            <div class="mb-3">
+              <h6>Retrieval details</h6>
+              <div id="debugModalDetails" class="small bg-light p-2 rounded"></div>
+            </div>
+          </div>
+
+          <div class="modal-footer border-0 pt-0">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(modalEl);
+  }
+
+  debugModalTitle = document.getElementById("debugModalTitle");
+  debugModalPrompt = document.getElementById("debugModalPrompt");
+  debugModalDetails = document.getElementById("debugModalDetails");
+
+  // eslint-disable-next-line no-undef
+  debugModalInstance = new bootstrap.Modal(modalEl);
+}
+
+function openDebugModal(debugInfo) {
+  if (!debugModalInstance) {
+    initDebugModal();
+  }
+
+  debugModalPrompt.textContent = debugInfo.prompt || "No prompt available.";
+
+  if (debugInfo.retrievalSummary) {
+    const summary = debugInfo.retrievalSummary;
+    if (summary.mode === "general") {
+      debugModalDetails.innerHTML = `<p>${summary.note || "General mode uses LLM knowledge without local retrieval."}</p>`;
+    } else {
+      const docs = summary.top_documents || [];
+      const listItems = docs
+        .map(
+          (doc) =>
+            `<li><strong>${doc.case_name || "Unknown"}</strong>${doc.citation ? ` (${doc.citation})` : ""}${doc.court ? ` — ${doc.court}` : ""}${doc.judgment_date ? ` • ${doc.judgment_date}` : ""}</li>`
+        )
+        .join("");
+      debugModalDetails.innerHTML = `
+        <p>Retrieved ${summary.retrieved_documents || docs.length} document(s).</p>
+        <ul>${listItems}</ul>
+      `;
+    }
+  } else {
+    debugModalDetails.innerHTML = "<p>No retrieval details available.</p>";
+  }
+
+  debugModalInstance.show();
+}
+
 // =======================
 // INLINE CITATIONS HELPERS
 // =======================
@@ -267,25 +384,50 @@ function addUserMessage(text) {
   scrollToBottom();
 }
 
-function addBotMessage(html, sourcesForMessage = null) {
+function addBotMessage(html, sourcesForMessage = null, retrievalSummary = null, debugInfo = null) {
   hideEmptyState();
 
   const wrapper = document.createElement("div");
   wrapper.classList.add("message", "bot-msg");
   wrapper.innerHTML = `
     <div class="bubble bot-bubble">${html}</div>
-    <div class="mt-2">
-      <button
-        class="btn btn-secondary"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#sourcesDrawer"
-      >
-        📚 Sources
-      </button>
-    </div>
+    ${retrievalSummary ? `
+      <div class="mt-2 small text-secondary-emphasis">
+        ${renderRetrievalSummary(retrievalSummary)}
+      </div>
+    ` : ""}
+    ${debugInfo && debugInfo.prompt ? `
+      <div class="mt-2">
+        <button
+          class="btn btn-outline-secondary btn-sm"
+          type="button"
+          id="debugBtn-${Math.random().toString(36).slice(2)}"
+        >
+          🔍 View prompt/context
+        </button>
+      </div>
+    ` : ""}
+    ${sourcesForMessage && sourcesForMessage.length ? `
+      <div class="mt-2">
+        <button
+          class="btn btn-secondary"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sourcesDrawer"
+        >
+          📚 Sources
+        </button>
+      </div>
+    ` : ""}
   `;
-  messagesDiv.appendChild(wrapper);
+  if (debugInfo && debugInfo.prompt) {
+    const btn = wrapper.querySelector("button[id^='debugBtn-']");
+    if (btn) {
+      btn.addEventListener("click", () => {
+        openDebugModal(debugInfo);
+      });
+    }
+  }
 
   // Wire up inline citation click events for THIS message only
   if (sourcesForMessage && sourcesForMessage.length) {
@@ -300,7 +442,30 @@ function addBotMessage(html, sourcesForMessage = null) {
     });
   }
 
+  messagesDiv.appendChild(wrapper);
   scrollToBottom();
+}
+
+function renderRetrievalSummary(summary) {
+  if (!summary) return "";
+
+  if (summary.mode === "general") {
+    return summary.note || "General mode uses LLM knowledge without local retrieval.";
+  }
+
+  const lines = [];
+  if (typeof summary.retrieved_documents === "number") {
+    lines.push(`Retrieved ${summary.retrieved_documents} document(s)`);
+  }
+  if (summary.top_documents && summary.top_documents.length > 0) {
+    const topDocs = summary.top_documents
+      .slice(0, 3)
+      .map((doc) => `${doc.case_name || "Unknown"}${doc.citation ? ` (${doc.citation})` : ""}`)
+      .join("; ");
+    lines.push(`Top docs: ${topDocs}`);
+  }
+
+  return lines.join(" \u2022 ");
 }
 
 // =======================
@@ -320,18 +485,103 @@ function renderHistory() {
     const snippet =
       item.query.length > 60 ? item.query.slice(0, 60) + "…" : item.query;
 
+    const modes = [];
+    if (item.promptType) {
+      const promptTag =
+        item.promptType === "zeroshot"
+          ? "Zero-shot"
+          : item.promptType === "concise"
+          ? "Concise"
+          : item.promptType === "citation"
+          ? "Citation-aware"
+          : "Few-shot";
+      modes.push(promptTag);
+    }
+    if (item.responses) {
+      if (item.responses.case_law) modes.push("Case-Law");
+      if (item.responses.general) modes.push("General");
+    }
+
     const el = document.createElement("button");
     el.type = "button";
-    el.className = "list-group-item list-group-item-action small text-start";
+    el.className = `list-group-item list-group-item-action small text-start ${
+      activeHistoryIndex === index ? "active" : ""
+    }`;
 
     el.innerHTML = `
       <strong>Query #${index + 1}</strong>
       <div class="text-secondary-emphasis">${snippet}</div>
-      <div class="text-muted small">${item.time}</div>
+      <div class="text-muted small">${item.time}${modes.length ? ` • ${modes.join(", ")}` : ""}</div>
     `;
+
+    el.addEventListener("click", () => {
+      loadHistoryItem(index);
+    });
 
     historyList.appendChild(el);
   });
+}
+
+function loadHistoryItem(index) {
+  if (index < 0 || index >= chatHistory.length) return;
+
+  activeHistoryIndex = index;
+  const item = chatHistory[index];
+
+  // Auto-switch mode if current mode doesn't have a cached response
+  let targetMode = mode;
+  if (item.responses && !item.responses[mode]) {
+    // Find the first available mode with a cached response
+    if (item.responses.case_law) {
+      targetMode = "case_law";
+    } else if (item.responses.general) {
+      targetMode = "general";
+    }
+    
+    // Switch mode if needed
+    if (targetMode !== mode) {
+      mode = targetMode;
+      if (modeLabel) {
+        modeLabel.textContent = mode === "general" ? "General" : "Case-Law";
+      }
+      if (modeToggleBtn) {
+        modeToggleBtn.textContent = mode === "general" ? "Mode: General" : "Mode: Case-Law";
+      }
+    }
+  }
+
+  // Show the Q&A in the chat
+  messagesDiv.innerHTML = "";
+
+  addUserMessage(item.query);
+
+  // Get the response for the target mode from the cached responses
+  if (item.responses && item.responses[targetMode]) {
+    const response = item.responses[targetMode];
+    const answerWithCitations = applyInlineCitations(
+      response.answer,
+      response.sources
+    );
+    const htmlAnswer = marked.parse(answerWithCitations);
+
+    addBotMessage(htmlAnswer, response.sources, response.retrievalSummary, {
+      prompt: response.prompt,
+      retrievalSummary: response.retrievalSummary,
+    });
+
+    renderSources(response.sources);
+  } else {
+    // No response cached for this mode (shouldn't happen now)
+    addBotMessage(
+      `<em>No response available for this question.</em>`,
+      [],
+      null,
+      null
+    );
+    renderSources([]);
+  }
+
+  renderHistory(); // Update active state
 }
 
 function renderSources(sources) {
@@ -391,7 +641,9 @@ function renderSources(sources) {
 
 function resetConversation() {
   addEmptyState();
-  renderHistory();
+  // Do NOT clear chatHistory - preserve it for the History drawer
+  activeHistoryIndex = null;
+  renderHistory(); // Re-render to show all preserved history
   renderSources([]);
   queryInput.value = "";
   setThinking(false);
@@ -399,6 +651,138 @@ function resetConversation() {
 }
 
 // =======================
+// VECTOR STORE PREVIEW
+// =======================
+
+async function loadVectorStorePreview() {
+  if (vectorStoreLoaded || !vectorStoreList) return;
+
+  vectorStoreList.innerHTML =
+    '<div class="text-center py-3">Loading vector store preview...</div>';
+
+  try {
+    const res = await fetch("/vectorstore");
+    const data = await res.json();
+    const preview = data.preview || [];
+
+    if (preview.length === 0) {
+      vectorStoreList.innerHTML =
+        '<div class="text-secondary-emphasis">No vector store entries found.</div>';
+      return;
+    }
+
+    vectorStoreList.innerHTML = "";
+
+    preview.forEach((item, index) => {
+      const card = document.createElement("div");
+      card.className = "card mb-3 shadow-sm border-0";
+      card.innerHTML = `
+        <div class="card-body p-3">
+          <div class="d-flex align-items-start mb-1">
+            <span class="badge rounded-pill bg-info me-2">#${index + 1}</span>
+            <div>
+              <strong>${item.case_name || "Unknown case"}</strong><br>
+              <span class="small">${item.citation || "No citation"}</span><br>
+              ${item.court ? `<span class="small">${item.court}</span><br>` : ""}
+              ${item.judgment_date ? `<span class="small">${item.judgment_date}</span>` : ""}
+            </div>
+          </div>
+          <p class="small text-muted mb-2"><strong>FAISS ID:</strong> ${item.faiss_id} · <strong>Doc ID:</strong> ${item.doc_id}</p>
+          <p class="small text-body-secondary mb-2">${item.snippet || "No preview available."}</p>
+          <div class="d-flex flex-wrap gap-2">
+            ${item.saflii_url ? `<a href="${item.saflii_url}" target="_blank" class="btn btn-sm btn-primary">SAFLII</a>` : ""}
+          </div>
+        </div>
+      `;
+      vectorStoreList.appendChild(card);
+    });
+
+    vectorStoreLoaded = true;
+  } catch (err) {
+    console.error(err);
+    vectorStoreList.innerHTML =
+      '<div class="text-danger">Unable to load vector store preview. Please refresh the page.</div>';
+  }
+}
+
+// =======================
+// REGENERATE CHAT IN NEW MODE
+// =======================
+
+async function regenerateChatInMode() {
+  setThinking(true);
+
+  // Clear messages but keep empty state hidden
+  messagesDiv.innerHTML = "";
+
+  try {
+    // Iterate through each chat history entry
+    for (const historyItem of chatHistory) {
+      const query = historyItem.query;
+
+      addUserMessage(query);
+
+      // Check if response already cached for this mode
+      if (!historyItem.responses) {
+        historyItem.responses = {};
+      }
+
+      let sources = [];
+      let rawAnswer = "";
+
+      let retrievalSummary = null;
+      let promptText = null;
+      if (historyItem.responses[mode]) {
+        // Use cached response
+        const cachedResponse = historyItem.responses[mode];
+        rawAnswer = cachedResponse.answer;
+        sources = cachedResponse.sources;
+        retrievalSummary = cachedResponse.retrievalSummary || null;
+        promptText = cachedResponse.prompt || null;
+      } else {
+        // Fetch new response for this mode
+        const res = await fetch("/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ query, mode, prompt_type: promptType }),
+        });
+
+        const data = await res.json();
+        sources = data.sources || [];
+        rawAnswer = data.answer || "";
+        retrievalSummary = data.retrieval_summary || null;
+        promptText = data.prompt || null;
+
+        // Cache the response
+        historyItem.responses[mode] = {
+          answer: rawAnswer,
+          sources: sources,
+          retrievalSummary,
+          prompt: promptText,
+        };
+      }
+
+      const answerWithCitations = applyInlineCitations(rawAnswer, sources);
+      const htmlAnswer = marked.parse(answerWithCitations);
+
+      addBotMessage(htmlAnswer, sources, retrievalSummary, {
+        prompt: promptText,
+        retrievalSummary,
+      });
+    }
+
+    renderHistory();
+    renderSources(chatHistory.length > 0 ? chatHistory[chatHistory.length - 1].responses[mode].sources : []);
+  } catch (err) {
+    console.error(err);
+    addBotMessage(
+      `<span class="text-danger">⚠️ Error regenerating chat in new mode. Please try again.</span>`
+    );
+  } finally {
+    setThinking(false);
+    scrollToBottom();
+  }
+}
 // MAIN SEND FUNCTION
 // =======================
 
@@ -407,6 +791,7 @@ async function sendMessage() {
   if (!query || isThinking) return;
 
   setThinking(true);
+  activeHistoryIndex = null; // Clear active history when sending new message
 
   addUserMessage(query);
   queryInput.value = "";
@@ -416,12 +801,14 @@ async function sendMessage() {
     const res = await fetch("/ask", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query }),
+      body: JSON.stringify({ query, mode, prompt_type: promptType }),
     });
 
     const data = await res.json();
     const sources = data.sources || [];
     const rawAnswer = data.answer || "";
+    const retrievalSummary = data.retrieval_summary || null;
+    const promptText = data.prompt || null;
 
     // Inject clickable [1], [2], ... based on neutral_citation / citation
     const answerWithCitations = applyInlineCitations(rawAnswer, sources);
@@ -429,20 +816,33 @@ async function sendMessage() {
     // Markdown → HTML
     const htmlAnswer = marked.parse(answerWithCitations);
 
-    addBotMessage(htmlAnswer, sources);
+    addBotMessage(htmlAnswer, sources, retrievalSummary, {
+      prompt: promptText,
+      retrievalSummary,
+    });
 
     const timeStr = new Date().toLocaleTimeString([], {
       hour: "2-digit",
       minute: "2-digit",
     });
 
-    chatHistory.push({
+    const historyEntry = {
       query,
+      time: timeStr,
+      promptType,
+      responses: {},
+    };
+
+    historyEntry.responses[mode] = {
       answer: rawAnswer,
       sources,
-      time: timeStr,
-    });
+      retrievalSummary,
+      prompt: promptText,
+    };
 
+    chatHistory.push(historyEntry);
+
+    activeHistoryIndex = chatHistory.length - 1; // Set active to latest
     renderHistory();
     renderSources(sources);
   } catch (err) {
@@ -465,6 +865,20 @@ if (chatForm) {
   chatForm.addEventListener("submit", (e) => {
     e.preventDefault();
     sendMessage();
+  });
+}
+
+// Mode toggle button
+if (modeToggleBtn) {
+  modeToggleBtn.addEventListener("click", () => {
+    setMode(mode === "general" ? "case_law" : "general");
+  });
+}
+
+// Vector store preview button
+if (vectorStoreBtn) {
+  vectorStoreBtn.addEventListener("click", () => {
+    loadVectorStorePreview();
   });
 }
 
@@ -492,6 +906,7 @@ document.querySelectorAll(".example-question").forEach((btn) => {
   btn.addEventListener("click", () => {
     queryInput.value = btn.textContent.trim();
     updateSendState();
+    activeHistoryIndex = null; // Clear active history when starting new message
     sendMessage();
   });
 });

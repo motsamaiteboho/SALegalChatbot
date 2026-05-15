@@ -52,9 +52,62 @@ def index():
 def ask():
     data = request.get_json() or {}
     user_query = data.get("query", "").strip()
+    mode = (data.get("mode", "case_law") or "case_law").strip().lower()
+    prompt_type = (data.get("prompt_type", "fewshot") or "fewshot").strip().lower()
+    if prompt_type not in {"fewshot", "zeroshot", "concise", "citation"}:
+        prompt_type = "fewshot"
 
     if not user_query:
         return jsonify({"answer": "Please enter a question.", "sources": []})
+
+    if mode == "general":
+        if prompt_type == "zeroshot":
+            prompt = f"""
+You are a South African legal research assistant.
+
+Answer the user's question in a single, coherent narrative in professional South African legal style.
+Do NOT use headings, bullet lists, or numbered lists.
+You may include normal references to South African case law where appropriate, using real case names and citations if they are relevant to the legal issue. Do not invent cases or citations.
+
+Question:
+{user_query}
+"""
+        else:
+            prompt = f"""
+You are a South African legal research assistant.
+
+First, decide whether the user's question is asking for South African legal principles, case law, or both.
+Answer in a single, coherent narrative in professional South African legal style.
+Do NOT use headings, bullet lists, or numbered lists.
+You may include normal references to South African case law where appropriate, using real case names and citations if they are relevant to the legal issue. Do not invent cases or citations.
+
+Question:
+{user_query}
+"""
+        response = llm.invoke(prompt)
+        answer = response.content if hasattr(response, "content") else str(response)
+
+        refusal_line = "I'm only able to assist with South African legal questions based on SAFLII case law."
+        if refusal_line in answer:
+            return jsonify({
+                "answer": refusal_line,
+                "sources": [],
+                "retrieval_summary": {
+                    "mode": "general",
+                    "note": "General mode uses LLM knowledge without local retrieval."
+                },
+                "prompt": prompt,
+            })
+
+        return jsonify({
+            "answer": answer,
+            "sources": [],
+            "retrieval_summary": {
+                "mode": "general",
+                "note": "General mode uses LLM knowledge without local retrieval."
+            },
+            "prompt": prompt,
+        })
 
     # --- 1) Multi-query expansion over local FAISS index ---
     docs = multi_retriever.get_relevant_documents(user_query)
@@ -64,8 +117,6 @@ def ask():
         # Try again with standard retriever & a larger top-k
         docs = retriever.get_relevant_documents(user_query)
 
-    # --- 3) Build context for model (may still be empty) ---
-    # Include court, date and SAFLII URL in the "Source:" line so the model sees them.
     context_parts = []
     for d in docs:
         m = d.metadata or {}
@@ -86,7 +137,90 @@ def ask():
 
     context = "\n\n".join(context_parts)
 
-    prompt = f"""
+    if prompt_type == "zeroshot":
+        prompt = f"""
+You are a South African legal research assistant.
+
+Answer the question below in a single, coherent narrative in professional South African legal style.
+Do NOT use headings, bullet lists, or numbered lists.
+Prefer to base your answer on the SAFLII context below.
+If the context does not clearly cover the issue, you may still answer using general South African legal principles, and you should say that no specific SAFLII cases could be identified from the provided context.
+Only cite cases from metadata when you rely on a rule grounded in a case.
+
+Question:
+{user_query}
+
+Context:
+{context}
+"""
+    elif prompt_type == "citation":
+        prompt = f"""
+    You are a South African legal research assistant.
+
+    First, decide whether the user's question is:
+    (A) a South African legal question (doctrinal, case-law or practical), or
+
+    If it is (A), you may answer even if the context is limited, but:
+    - You may ONLY cite cases that appear in the Context metadata below.
+    - Ignore case names inside the raw judgment text. Only cite cases from metadata.
+    - Prefer to base your answer on the SAFLII context below.
+    - If the context does not clearly cover the issue, you may still answer using general
+    South African legal principles, and you should say that no specific SAFLII cases
+    could be identified from the provided context.
+
+    The Context section below contains the available cases and their neutral citations.
+    You MUST obey the following when writing your answer:
+
+    1. Always answer in South African legal style, citing case law where relevant.
+    2. Write a single, coherent narrative answer in professional South African legal style.
+    Do NOT use headings, bullet lists or numbered lists.
+    3. Whenever you state a specific legal rule, test, or conclusion that is grounded
+    in a case, explicitly weave the case into the sentence, e.g.:
+    "According to Atamelang Bus Transport (Pty) Ltd v MEC for Community Safety
+    [2025] ZANWHC 191, the court held that ..."
+    or
+    "Similarly, in NUM obo Employees v CCMA [2011] ZALAC 7 the Labour Appeal Court confirmed that ...".
+    4. Never invent new cases, new citations, or paraphrase existing cases into new forms. You may only use cases exactly as provided.
+    5. When you refer to a case from the Context, ALWAYS include its neutral citation
+    exactly as shown there (e.g. "Case v Case [2011] ZASCA 3").
+    6. Do NOT add a separate "Sources" or "References" section; just integrate cases
+    naturally into the narrative.
+    7. Ignore case names inside the raw judgment text. Only cite cases from metadata.
+    8. When you rely on a case, include its neutral citation exactly as shown in the Context.
+
+    IMPORTANT: The Context contains two levels of authority:
+
+    (1) METADATA CASES: These are the judgments for which you have
+        metadata entries (case_name, neutral_citation, court, date).
+        These are your PRIMARY authorities.
+
+    (2) EMBEDDED CASES: These are cases mentioned inside the raw text of
+    the metadata cases (for example, "as held in Minister of Safety and
+    Security v Van Duivenboden", quoted inside another judgment).
+
+    RULES:
+
+    - You must ALWAYS treat the metadata case as the primary authority.
+    - When you rely on a legal rule that appears in a metadata case, you MUST cite that metadata case.
+    - If the raw text also mentions another case (an embedded case), you MAY mention that case too, but you MUST show that you know
+    it only through the metadata case, e.g.:
+
+    "In D_D v SAFAMCO Enterprises (Pty) Ltd [2025] ZAWCHC 535 the Court,
+    relying on Minister of Safety and Security v Van Duivenboden, held
+    that negligence alone is not inherently unlawful."
+
+    You are NOT allowed to present embedded cases as if you have read their
+    judgments directly. They must always be anchored to the metadata case
+    that quotes them.
+    ---
+    Context:
+    {context}
+
+    Question:
+    {user_query}
+    """
+    else:
+        prompt = f"""
     You are a South African legal research assistant.
 
     First, decide whether the user's question is:
@@ -159,12 +293,30 @@ def ask():
 
     refusal_line = "I'm only able to assist with South African legal questions based on SAFLII case law."
     if refusal_line in answer:
-        return jsonify({"answer": refusal_line, "sources": []})
+        return jsonify({
+            "answer": refusal_line,
+            "sources": [],
+            "retrieval_summary": {
+                "mode": "case_law",
+                "retrieved_documents": len(docs),
+                "top_documents": []
+            },
+            "prompt": prompt,
+        })
 
     # If we truly have no docs even after fallback → answer but say no sources
     if not docs:
         answer += "\n\n_No specific SAFLII case excerpts could be retrieved for this query._"
-        return jsonify({"answer": answer, "sources": []})
+        return jsonify({
+            "answer": answer,
+            "sources": [],
+            "retrieval_summary": {
+                "mode": "case_law",
+                "retrieved_documents": 0,
+                "top_documents": []
+            },
+            "prompt": prompt,
+        })
 
     # --- 4) Build sources payload for the side drawer (dedup per case) ---
     sources = []
@@ -188,7 +340,64 @@ def ask():
             "summary": d.page_content[:400] + "..."
         })
 
-    return jsonify({"answer": answer, "sources": sources})
+    retrieval_summary = {
+        "mode": "case_law",
+        "retrieved_documents": len(docs),
+        "top_documents": [
+            {
+                "case_name": (d.metadata or {}).get("case_name"),
+                "citation": (d.metadata or {}).get("neutral_citation"),
+                "court": (d.metadata or {}).get("court"),
+                "judgment_date": (d.metadata or {}).get("judgment_date"),
+            }
+            for d in docs[:5]
+        ],
+    }
+
+    return jsonify({
+        "answer": answer,
+        "sources": sources,
+        "retrieval_summary": retrieval_summary,
+        "prompt": prompt,
+    })
+
+
+@app.route("/vectorstore", methods=["GET"])
+def vectorstore_preview():
+    preview = []
+    max_items = 20
+
+    for faiss_id, doc_id in list(vectorstore.index_to_docstore_id.items())[:max_items]:
+        doc = vectorstore.docstore._dict.get(doc_id)
+        if doc is None:
+            continue
+
+        metadata = doc.metadata or {}
+        case_name = metadata.get("case_name") or metadata.get("title") or "Unknown"
+        citation = metadata.get("neutral_citation") or metadata.get("citation") or ""
+        court = metadata.get("court") or ""
+        judgment_date = metadata.get("judgment_date") or metadata.get("date") or ""
+        saflii_url = metadata.get("saflii_case_url") or metadata.get("saflii_url") or ""
+
+        snippet = doc.page_content.strip()
+        if len(snippet) > 300:
+            snippet = snippet[:300].rsplit(" ", 1)[0] + "..."
+
+        preview.append({
+            "faiss_id": faiss_id,
+            "doc_id": doc_id,
+            "case_name": case_name,
+            "citation": citation,
+            "court": court,
+            "judgment_date": judgment_date,
+            "saflii_url": saflii_url,
+            "snippet": snippet,
+        })
+
+    return jsonify({
+        "count": len(preview),
+        "preview": preview,
+    })
 
 
 if __name__ == "__main__":
