@@ -185,8 +185,9 @@ Context:
     exactly as shown there (e.g. "Case v Case [2011] ZASCA 3").
     6. Do NOT add a separate "Sources" or "References" section; just integrate cases
     naturally into the narrative.
-    7. Ignore case names inside the raw judgment text. Only cite cases from metadata.
-    8. When you rely on a case, include its neutral citation exactly as shown in the Context.
+    7. Ignore case names inside the raw judgment text for sourcing. Only cite cases that appear in the provided metadata or cases explicitly relied on by those metadata cases.
+    8. If a metadata case quotes or relies on another case, you may mention that embedded case as a secondary authority, but you must clearly anchor it to the metadata case that cites it.
+    9. When you mention a case, include its neutral citation exactly as shown in the Context.
 
     IMPORTANT: The Context contains two levels of authority:
 
@@ -251,7 +252,9 @@ Context:
     exactly as shown there (e.g. "Case v Case [2011] ZASCA 3").
     6. Do NOT add a separate "Sources" or "References" section; just integrate cases
     naturally into the narrative.
-    7. Ignore case names inside the raw judgment text. Only cite cases from metadata.
+    7. Ignore case names inside the raw judgment text for sourcing. Only cite cases that appear in the provided metadata or cases explicitly relied on by those metadata cases.
+    8. If a metadata case quotes or relies on another case, you may mention that embedded case as a secondary authority, but you must clearly anchor it to the metadata case that cites it.
+    9. When you mention a case, include its neutral citation exactly as shown in the Context.
 
     IMPORTANT: The Context contains two levels of authority:
 
